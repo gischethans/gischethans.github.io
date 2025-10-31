@@ -1,6 +1,16 @@
-<header class="page-header" role="banner">
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <header class="page-header" role="banner">
   <h1 class="project-name">
-    <a href="{{ '/' | relative_url }}" class="site-title-link">
+    <a href="{{ '/' | relative_url }}" style="color: white; text-decoration: none;">
       {{ site.title }}
     </a>
   </h1>
@@ -12,3 +22,13 @@
     <a href="{{ '/about/' | relative_url }}" class="btn">About</a>
   </nav>
 </header>
+
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+      <footer class="site-footer">
+        <p>© {{ site.time | date: '%Y' }} {{ site.title }} · Generated with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+      </footer>
+    </main>
+  </body>
+</html>
