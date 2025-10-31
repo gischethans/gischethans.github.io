@@ -7,9 +7,6 @@ title: "Home"
 
 Genuine Insights, Honest Opinions
 
-[About Me](about/)
-
-
 ---
 
 ## Latest Posts
