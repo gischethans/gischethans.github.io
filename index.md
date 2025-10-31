@@ -6,3 +6,6 @@ title: "Home"
 # Welcome to StayGeo
 
 Genuine Insights, Honest Opinions
+
+[About Me](about/)
+
