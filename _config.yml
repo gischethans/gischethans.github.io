@@ -1,6 +1,8 @@
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
-- jekyll-remote-theme
+  - jekyll-remote-theme
 
-title: [StayGeo]
-description: [Genuine Insights, Honest Opinions]
+title: "StayGeo"
+description: "Genuine Insights, Honest Opinions"
+
+show_downloads: false

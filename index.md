@@ -1,6 +1,8 @@
 ---
-layout: home
-title: "StayGeo"
+layout: default
+title: "Home"
 ---
 
-Welcome to **StayGeo** — a space for genuine insights and honest opinions
+# Welcome to StayGeo
+
+Genuine Insights, Honest Opinions
