@@ -7,11 +7,6 @@
 
     <!-- Load Cayman theme stylesheet from the remote theme -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-    <!-- Optional: your overrides (only if this file exists) -->
-    {% if site.static_files | where: "path", "/assets/css/custom.css" | first %}
-      <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-    {% endif %}
   </head>
   <body>
 
