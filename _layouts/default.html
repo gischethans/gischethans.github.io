@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Load Cayman theme stylesheet from the remote theme -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  <!-- Use locally referenced Cayman CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
+    <!-- Optional: your overrides (only if this file exists) -->
+    {% if site.static_files | where: "path", "/assets/css/custom.css" | first %}
+      <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+    {% endif %}
+  </head>
+  <body>
 
-<body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">
+        <a href="{{ '/' | relative_url }}" style="color:#fff; text-decoration:none;">
+          {{ site.title }}
+        </a>
+      </h1>
+      <h2 class="project-tagline">{{ site.description }}</h2>
 
-  <header class="page-header" role="banner">
-    <h1 class="project-name">
-      <a href="{{ '/' | relative_url }}" style="color: white; text-decoration: none;">
-        {{ site.title }}
-      </a>
-    </h1>
-    <h2 class="project-tagline">{{ site.description }}</h2>
+      <nav style="margin-top:1rem;">
+        <a href="{{ '/' | relative_url }}" class="btn">Home</a>
+        <a href="{{ '/blog/' | relative_url }}" class="btn">Blog</a>
+        <a href="{{ '/about/' | relative_url }}" class="btn">About</a>
+      </nav>
+    </header>
 
-    <nav style="margin-top: 1rem;">
-      <a href="{{ '/' | relative_url }}" class="btn">Home</a>
-      <a href="{{ '/blog/' | relative_url }}" class="btn">Blog</a>
-      <a href="{{ '/about/' | relative_url }}" class="btn">About</a>
-    </nav>
-  </header>
-
-
-  <main id="content" class="main-content" role="main">
-    {{ content }}
-    <footer class="site-footer">
-      <p>© {{ site.time | date: '%Y' }} {{ site.title }} · Generated with <a href="https://pages.github.com/">GitHub
-          Pages</a>.</p>
-    </footer>
-  </main>
-</body>
-
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+      <footer class="site-footer">
+        <p>© {{ site.time | date: '%Y' }} {{ site.title }} · Generated with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+      </footer>
+    </main>
+  </body>
 </html>
