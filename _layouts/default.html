@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ ('/assets/css/style.css?v=' | append: site.github.build_revision) | relative_url }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Load Cayman theme stylesheet correctly -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
+  {% if site.github %}
+    <link rel="stylesheet" href="{{ site.github.url }}/assets/css/style.css?v={{ site.github.build_revision }}">
+  {% endif %}
+</head>
+
   <body>
 
     <header class="page-header" role="banner">
