@@ -7,6 +7,3 @@ description: "Genuine Insights, Honest Opinions"
 
 show_downloads: false
 
-gems:
-  - jekyll-remote-theme
-

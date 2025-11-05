@@ -19,10 +19,9 @@ layout: default
     {{ content }}
   </section>
 
-  <!-- Post footer: tags and categories -->
   {% if page.tags or page.categories %}
   <footer class="post-footer" style="margin-top: 2rem; border-top: 1px solid #eaecef; padding-top: 1rem; font-size: 0.9rem;">
-    
+
     {% if page.tags %}
     <p class="post-tags" style="margin: 0 0 0.5rem 0;">
       <strong>Tags:</strong>
@@ -46,8 +45,8 @@ layout: default
       {% endfor %}
     </p>
     {% endif %}
-    
+
   </footer>
-  {% endif %}
+{% endif %}
 
 </article>
