@@ -9,6 +9,30 @@ layout: default
     </h1>
     <p class="post-meta" style="color:#666; font-size:.9rem; margin:0;">
       {{ page.date | date: "%B %d, %Y" }}
+      {% if page.tags %}
+    <p class="post-tags" style="margin-top: 0.5rem; font-size: 0.9rem;">
+      Tags:
+      {% for tag in page.tags %}
+      <a href="{{ '/tags/#' | append: tag | relative_url }}" class="btn"
+        style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
+        {{ tag }}
+      </a>
+      {% endfor %}
+    </p>
+    {% if page.categories %}
+    <p class="post-categories" style="margin-top: 0.5rem; font-size: 0.9rem;">
+      Categories:
+      {% for cat in page.categories %}
+      <a href="{{ '/categories/#' | append: cat | relative_url }}" class="btn"
+        style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
+        {{ cat }}
+      </a>
+      {% endfor %}
+    </p>
+    {% endif %}
+
+    {% endif %}
+
     </p>
   </header>
 
