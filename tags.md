@@ -9,8 +9,9 @@ permalink: /tags/
 <ul>
 {% assign all_tags = site.tags | sort %}
 {% for tag in all_tags %}
-  <li id="{{ tag[0] }}">
-    <h3>{{ tag[0] }}</h3>
+  {% assign tagname = tag[0] %}
+  <li id="{{ tagname | slugify }}">
+    <h3>{{ tagname }}</h3>
     <ul>
       {% for post in tag[1] %}
         <li>

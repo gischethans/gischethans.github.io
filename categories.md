@@ -9,8 +9,9 @@ permalink: /categories/
 <ul>
 {% assign all_categories = site.categories | sort %}
 {% for category in all_categories %}
-  <li id="{{ category[0] }}">
-    <h3>{{ category[0] }}</h3>
+  {% assign cname = category[0] %}
+  <li id="{{ cname | slugify }}">
+    <h3>{{ cname }}</h3>
     <ul>
       {% for post in category[1] %}
         <li>
