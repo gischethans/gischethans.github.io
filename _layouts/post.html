@@ -23,10 +23,17 @@ layout: default
   <footer class="post-footer" style="margin-top: 2rem; border-top: 1px solid #eaecef; padding-top: 1rem; font-size: 0.9rem;">
 
     {% if page.tags %}
+    {% comment %}Normalize tags: support YAML arrays or comma-separated strings{% endcomment %}
+    {% assign tags = page.tags %}
+    {% if tags contains ',' %}
+      {% assign tags = tags | split: ',' %}
+    {% endif %}
     <p class="post-tags" style="margin: 0 0 0.5rem 0;">
       <strong>Tags:</strong>
-      {% for tag in page.tags %}
-        <a href="{{ '/tags/#' | append: tag | relative_url }}" class="btn"
+      {% for tag in tags %}
+        {% assign tag = tag | strip %}
+        {% capture tag_anchor %}{{ tag | slugify }}{% endcapture %}
+        <a href="{{ '/tags/#' | append: tag_anchor | relative_url }}" class="btn"
           style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
           {{ tag }}
         </a>
@@ -35,10 +42,16 @@ layout: default
     {% endif %}
 
     {% if page.categories %}
+    {% assign categories = page.categories %}
+    {% if categories contains ',' %}
+      {% assign categories = categories | split: ',' %}
+    {% endif %}
     <p class="post-categories" style="margin: 0;">
       <strong>Categories:</strong>
-      {% for cat in page.categories %}
-        <a href="{{ '/categories/#' | append: cat | relative_url }}" class="btn"
+      {% for cat in categories %}
+        {% assign cat = cat | strip %}
+        {% capture cat_anchor %}{{ cat | slugify }}{% endcapture %}
+        <a href="{{ '/categories/#' | append: cat_anchor | relative_url }}" class="btn"
           style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
           {{ cat }}
         </a>

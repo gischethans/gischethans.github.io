@@ -10,20 +10,7 @@
   </head>
   <body>
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">
-        <a href="{{ '/' | relative_url }}" style="color:#fff; text-decoration:none;">
-          {{ site.title }}
-        </a>
-      </h1>
-      <h2 class="project-tagline">{{ site.description }}</h2>
-
-      <nav style="margin-top:1rem;">
-        <a href="{{ '/' | relative_url }}" class="btn">Home</a>
-        <a href="{{ '/blog/' | relative_url }}" class="btn">Blog</a>
-        <a href="{{ '/about/' | relative_url }}" class="btn">About</a>
-      </nav>
-    </header>
+    {% include header.html %}
 
     <main id="content" class="main-content" role="main">
       {{ content }}
