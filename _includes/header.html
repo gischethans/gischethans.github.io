@@ -17,7 +17,7 @@
     <div>
       <strong style="font-size:0.85rem;">Top tags</strong>
       <div style="margin-top:0.25rem;">
-        {% assign top_tags = site.tags | sort: 'last' | reverse | slice: 0,5 %}
+  {% assign top_tags = site.tags | sort | slice: 0,5 %}
         {% for tag in top_tags %}
           {% assign tagname = tag[0] %}
           {% capture tag_anchor %}{{ tagname | slugify }}{% endcapture %}
@@ -32,7 +32,7 @@
     <div>
       <strong style="font-size:0.85rem;">Categories</strong>
       <div style="margin-top:0.25rem;">
-        {% assign top_cats = site.categories | sort: 'last' | reverse | slice: 0,5 %}
+  {% assign top_cats = site.categories | sort | slice: 0,5 %}
         {% for cat in top_cats %}
           {% assign cname = cat[0] %}
           {% capture cat_anchor %}{{ cname | slugify }}{% endcapture %}
