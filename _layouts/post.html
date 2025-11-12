@@ -38,7 +38,7 @@ page.categories: {{ page.categories | jsonify }}</pre>
           {% assign tag = tag | strip %}
           {% capture tag_anchor %}{{ tag | slugify }}{% endcapture %}
           <a href="{{ '/tags/#' | append: tag_anchor | relative_url }}" class="btn"
-            style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
+            style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem; color:#0366d6; background:#f1f8ff; border-radius:4px; text-decoration:none;">
             {{ tag }}
           </a>
         {% endfor %}
@@ -65,7 +65,7 @@ page.categories: {{ page.categories | jsonify }}</pre>
           {% assign cat = cat | strip %}
           {% capture cat_anchor %}{{ cat | slugify }}{% endcapture %}
           <a href="{{ '/categories/#' | append: cat_anchor | relative_url }}" class="btn"
-            style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
+            style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem; color:#0366d6; background:#f1f8ff; border-radius:4px; text-decoration:none;">
             {{ cat }}
           </a>
         {% endfor %}
