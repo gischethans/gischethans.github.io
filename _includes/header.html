@@ -12,37 +12,4 @@
     <a href="{{ '/about/' | relative_url }}" class="btn">About</a>
   </nav>
 
-  {%- comment -%}Show a short list of popular tags and categories in header{%- endcomment -%}
-  <div style="margin-top:0.75rem; display:flex; gap:1rem; align-items:flex-start;">
-    <div>
-      <strong style="font-size:0.85rem;">Top tags</strong>
-      <div style="margin-top:0.25rem;">
-  {% assign top_tags = site.tags | sort | slice: 0,5 %}
-        {% for tag in top_tags %}
-          {% assign tagname = tag[0] %}
-          {% capture tag_anchor %}{{ tagname | slugify }}{% endcapture %}
-          <a href="{{ '/tags/#' | append: tag_anchor | relative_url }}" class="btn" style="font-size:0.8rem; margin-right:0.25rem;">{{ tagname }}</a>
-        {% endfor %}
-        {% if top_tags == empty %}
-          <span style="color:#666; font-size:0.8rem;">(no tags yet)</span>
-        {% endif %}
-      </div>
-    </div>
-
-    <div>
-      <strong style="font-size:0.85rem;">Categories</strong>
-      <div style="margin-top:0.25rem;">
-  {% assign top_cats = site.categories | sort | slice: 0,5 %}
-        {% for cat in top_cats %}
-          {% assign cname = cat[0] %}
-          {% capture cat_anchor %}{{ cname | slugify }}{% endcapture %}
-          <a href="{{ '/categories/#' | append: cat_anchor | relative_url }}" class="btn" style="font-size:0.8rem; margin-right:0.25rem;">{{ cname }}</a>
-        {% endfor %}
-        {% if top_cats == empty %}
-          <span style="color:#666; font-size:0.8rem;">(no categories yet)</span>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-
 </header>
