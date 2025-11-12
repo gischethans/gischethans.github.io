@@ -18,15 +18,7 @@ layout: default
   <section class="post-content" style="line-height:1.7; font-size:1.05rem; color:#24292e;">
     {{ content }}
   </section>
-
-  <!-- DEBUG: inspect tags/categories for this page -->
-  <!-- page.tags: {{ page.tags | jsonify }} -->
-  <!-- page.categories: {{ page.categories | jsonify }} -->
-  <div style="background:#f6f8fa; padding:0.5rem; margin-top:0.5rem; font-size:0.85rem; color:#333;">
-    <strong>Debug:</strong>
-    <pre style="white-space:pre-wrap; margin:0;">page.tags: {{ page.tags | jsonify }}
-page.categories: {{ page.categories | jsonify }}</pre>
-  </div>
+  
 
   {% if page.tags or page.categories %}
   <footer class="post-footer" style="margin-top: 2rem; border-top: 1px solid #eaecef; padding-top: 1rem; font-size: 0.9rem;">
@@ -37,8 +29,7 @@ page.categories: {{ page.categories | jsonify }}</pre>
         {% for tag in page.tags %}
           {% assign tag = tag | strip %}
           {% capture tag_anchor %}{{ tag | slugify }}{% endcapture %}
-          <a href="{{ '/tags/#' | append: tag_anchor | relative_url }}" class="btn"
-            style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem; color:#0366d6; background:#f1f8ff; border-radius:4px; text-decoration:none;">
+          <a href="{{ '/tags/#' | append: tag_anchor | relative_url }}" class="tag-pill">
             {{ tag }}
           </a>
         {% endfor %}
@@ -64,8 +55,7 @@ page.categories: {{ page.categories | jsonify }}</pre>
         {% for cat in page.categories %}
           {% assign cat = cat | strip %}
           {% capture cat_anchor %}{{ cat | slugify }}{% endcapture %}
-          <a href="{{ '/categories/#' | append: cat_anchor | relative_url }}" class="btn"
-            style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem; color:#0366d6; background:#f1f8ff; border-radius:4px; text-decoration:none;">
+          <a href="{{ '/categories/#' | append: cat_anchor | relative_url }}" class="cat-pill">
             {{ cat }}
           </a>
         {% endfor %}
