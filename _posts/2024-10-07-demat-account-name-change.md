@@ -6,7 +6,10 @@ tags: [demat-account, PAN, CDSL, Protean, Shoonya, Zerodha, transfer-fees]
 categories: [finance]
 ---
 
-TL;DR: Correct PAN first. If your broker rejects a demat name correction, transfer holdings (CDSL) to another broker, fix the name, then transfer back. Expect transfer fees and 10–14 day turnaround for transfers.
+**TL;DR**: 
+Correct PAN first. If your broker rejects a demat name correction, transfer holdings (CDSL) to another broker, fix the name, then transfer back. Expect transfer fees and 10–14 day turnaround for transfers.
+
+---
 
 Brokers fetch account-holder names from the PAN database; sometimes that entry differs from the name printed on the PAN card. Here's how I corrected my wife's name.
 
