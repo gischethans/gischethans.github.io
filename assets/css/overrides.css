@@ -59,9 +59,9 @@
 
 /* Limit excerpt height and add a subtle fade at the bottom */
 .post-excerpt {
-  max-height: 6.8em; /* roughly 4 lines depending on font-size */
   overflow: hidden;
   position: relative;
+  line-height: 1.25;
 }
 .post-excerpt::after {
   content: '';
@@ -78,6 +78,16 @@
 .post-excerpt a {
   position: relative;
   z-index: 2;
+}
+
+/* Homepage: ~3 lines */
+.post-excerpt.index {
+  max-height: calc(1.25em * 3);
+}
+
+/* Blog page: ~6 lines */
+.post-excerpt.blog {
+  max-height: calc(1.25em * 6);
 }
 
 .post-figure { text-align:center; margin:1.25rem 0; }
