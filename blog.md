@@ -13,9 +13,9 @@ permalink: /blog/
       <small>({{ post.date | date: "%b %d, %Y" }})</small>
       <div class="post-excerpt blog">
         {% if post.excerpt %}
-          {{ post.excerpt | strip_html | truncate: 380 }}
+          {{ post.excerpt | strip_html }}
         {% else %}
-          {{ post.content | strip_html | truncate: 380 }}
+          {{ post.content | strip_html }}
         {% endif %}
         <a href="{{ post.url | relative_url }}">Read more →</a>
       </div>

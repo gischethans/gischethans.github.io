@@ -13,6 +13,8 @@ Correct PAN first. If your broker rejects a demat name correction, transfer hold
   <img src="{{ '/assets/images/demat-name-fix.svg' | relative_url }}" alt="Illustration of identity card and arrows representing transfer and correction" loading="lazy" />
   <figcaption>Fix PAN → transfer holdings (CDSL) → transfer back</figcaption>
 </figure>
+
+<!--more-->
 ---
 
 Brokers fetch account-holder names from the PAN database; sometimes that entry differs from the name printed on the PAN card. Here's how I corrected my wife's name.
