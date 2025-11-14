@@ -41,92 +41,59 @@
   font-size: 0.9rem;
 }
 
-/* Excerpt styling used on index listing */
+/* Excerpt styling (base + page-specific clamps + explicit-excerpt override)
+   - Base: typography, spacing, overflow handling
+   - Per-page: .index (3 lines), .blog (6 lines)
+   - .full: when a post provides an explicit excerpt via <!--more--> show full text
+*/
 .post-excerpt {
   margin-top: 0.35rem;
   color: #444;
   font-size: 0.95rem;
-}
-.post-excerpt a {
-  margin-left: 0.5rem;
-  font-weight: 600;
-  color: var(--brand-color);
-  text-decoration: none;
-}
-.post-excerpt a:hover {
-  text-decoration: underline;
-}
-
-/* small utility class for the automatic read-more link */
-.excerpt-readmore {
-  margin-left: 0.5rem;
-  font-weight: 600;
-  color: var(--brand-color);
-  text-decoration: none;
-}
-.excerpt-readmore:hover { text-decoration: underline; }
-
-/* Limit excerpt height and add a subtle fade at the bottom */
-.post-excerpt {
+  line-height: 1.5; /* increased spacing for readability */
   overflow: hidden;
   position: relative;
-  line-height: 1.5; /* increased spacing for readability */
+
+  /* default to clamp-friendly layout (WebKit/Blink) */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
-/* Homepage: ~3 lines */
-.post-excerpt.index {
-  max-height: calc(1.5em * 3);
-}
+/* Per-page visible line counts (kept as soft max-height fallback too) */
+.post-excerpt.index { -webkit-line-clamp: 3; line-clamp: 3; max-height: calc(1.5em * 3); }
+.post-excerpt.blog  { -webkit-line-clamp: 6; line-clamp: 6; max-height: calc(1.5em * 6); }
 
-/* Blog page: ~6 lines */
-.post-excerpt.blog {
-  max-height: calc(1.5em * 6);
-}
+/* Small utility class for the automatic read-more link */
+.excerpt-readmore { margin-left: 0.5rem; font-weight: 600; color: var(--brand-color); text-decoration: none; }
+.excerpt-readmore:hover { text-decoration: underline; }
 
-/* Subtle fade using mask-image and an overlaid ellipsis for older browsers */
-.post-excerpt {
-  /* mask fade: keeps text readable but visually indicates truncation */
-  -webkit-mask-image: linear-gradient(180deg, black 85%, transparent 100%);
-  mask-image: linear-gradient(180deg, black 85%, transparent 100%);
-}
+/* Subtle fade for visual truncation (keeps text readable); removed when .full is used */
+.post-excerpt { -webkit-mask-image: linear-gradient(180deg, black 85%, transparent 100%); mask-image: linear-gradient(180deg, black 85%, transparent 100%); }
 
-/* Overlay ellipsis in the bottom-right so readers see there's more */
+/* Overlay ellipsis in the bottom-right to indicate more content; hidden for .full */
 .post-excerpt::after {
-  content: '\2026'; /* ellipsis character */
+  content: '\2026';
   position: absolute;
   right: 0.5rem;
   bottom: 0.2rem;
-  background: transparent;
   color: rgba(0,0,0,0.8);
   font-weight: 600;
-  padding-left: 0.25rem;
   pointer-events: none;
-  /* ensure it displays above normal text */
   z-index: 3;
 }
 
-/* Fallback: clamp lines and show native ellipsis where supported (WebKit/Blink) */
-.post-excerpt.index, .post-excerpt.blog {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  /* leave -webkit-line-clamp unset here; set per-class */
-}
-.post-excerpt.index {
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-}
-.post-excerpt.blog {
-  -webkit-line-clamp: 6;
-  line-clamp: 6;
-}
-
-/* When a post provides an explicit excerpt via <!--more-->, show it in full here */
+/* When an explicit excerpt exists, show the content fully and remove the fade/ellipsis */
 .post-excerpt.full {
   max-height: none !important;
   overflow: visible !important;
+  display: block !important;
+  /* remove any clamping by unsetting line-clamp properties */
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
   -webkit-mask-image: none !important;
   mask-image: none !important;
 }
+.post-excerpt.full::after { display: none !important; }
 
 .post-figure { text-align:center; margin:1.25rem 0; }
 .post-figure img { max-width:100%; height:auto; }
