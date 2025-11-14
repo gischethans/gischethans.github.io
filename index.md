@@ -5,17 +5,25 @@ title: "Home"
 
 # Welcome to StayGeo
 
-Genuine Insights, Honest Opinions
+StayGeo began on Blogger in 2010. In 2025 I moved the site to GitHub Pages for a cleaner writing and reading experience. The original blog remains at https://gischethans.blogspot.com/.
 
 ---
 
-## Latest Posts
+## Latest posts
 
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.posts limit:10 %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <small>({{ post.date | date: "%b %d, %Y" }})</small>
+  <div class="post-excerpt">
+        {% if post.excerpt %}
+          {{ post.excerpt | strip_html | truncate: 200 }}
+        {% else %}
+          {{ post.content | strip_html | truncate: 200 }}
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" style="margin-left:0.5rem; font-weight:600;">Read more →</a>
+      </div>
     </li>
   {% endfor %}
 </ul>

@@ -12,6 +12,11 @@
   --brand-bg: #e9f7f7;    /* light background for pills */
 }
 
+/* Use brand background as default excerpt background for fade */
+.main-content {
+  --excerpt-bg: var(--brand-bg);
+}
+
 /* Tag and category pill styles (scoped) */
 .main-content .post-tags, .main-content .post-categories {
   display: flex;
@@ -34,6 +39,45 @@
 /* Tweak post-footer font size and spacing */
 .main-content .post-footer {
   font-size: 0.9rem;
+}
+
+/* Excerpt styling used on index listing */
+.post-excerpt {
+  margin-top: 0.35rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+.post-excerpt a {
+  margin-left: 0.5rem;
+  font-weight: 600;
+  color: var(--brand-color);
+  text-decoration: none;
+}
+.post-excerpt a:hover {
+  text-decoration: underline;
+}
+
+/* Limit excerpt height and add a subtle fade at the bottom */
+.post-excerpt {
+  max-height: 6.8em; /* roughly 4 lines depending on font-size */
+  overflow: hidden;
+  position: relative;
+}
+.post-excerpt::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.2em; /* area to fade */
+  pointer-events: none;
+  background: linear-gradient(rgba(255,255,255,0), var(--excerpt-bg));
+  z-index: 1;
+}
+/* Keep links and inline content above the fade */
+.post-excerpt a {
+  position: relative;
+  z-index: 2;
 }
 
 .post-figure { text-align:center; margin:1.25rem 0; }
