@@ -5,7 +5,7 @@ title: "Home"
 
 # Welcome to StayGeo
 
-StayGeo began on Blogger in 2010. In 2025 I moved the site to GitHub Pages for a cleaner writing and reading experience. The original blog remains at https://gischethans.blogspot.com/.
+StayGeo began on Blogger in 2010. In 2025 I moved the site to GitHub Pages for a cleaner writing and reading experience. The old posts remain at [gischethans.blogspot.com](https://gischethans.blogspot.com/).
 
 ---
 

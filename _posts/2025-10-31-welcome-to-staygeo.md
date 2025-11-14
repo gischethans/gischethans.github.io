@@ -6,6 +6,4 @@ tags: [intro, reflections, devops]
 categories: [meta]
 ---
 
-Every good idea starts somewhere.
-
-This is my first post on StayGeo — a space for genuine insights and honest opinions.
+Every good idea starts somewhere. This is my first post on StayGeo refreshed, after moving from Blogger. I'll write about technology, telecom, personal finance here.
