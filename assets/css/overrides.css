@@ -61,33 +61,54 @@
 .post-excerpt {
   overflow: hidden;
   position: relative;
-  line-height: 1.25;
-}
-.post-excerpt::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2.2em; /* area to fade */
-  pointer-events: none;
-  background: linear-gradient(rgba(255,255,255,0), var(--excerpt-bg));
-  z-index: 1;
-}
-/* Keep links and inline content above the fade */
-.post-excerpt a {
-  position: relative;
-  z-index: 2;
+  line-height: 1.5; /* increased spacing for readability */
 }
 
 /* Homepage: ~3 lines */
 .post-excerpt.index {
-  max-height: calc(1.25em * 3);
+  max-height: calc(1.5em * 3);
 }
 
 /* Blog page: ~6 lines */
 .post-excerpt.blog {
-  max-height: calc(1.25em * 6);
+  max-height: calc(1.5em * 6);
+}
+
+/* Subtle fade using mask-image and an overlaid ellipsis for older browsers */
+.post-excerpt {
+  /* mask fade: keeps text readable but visually indicates truncation */
+  -webkit-mask-image: linear-gradient(180deg, black 85%, transparent 100%);
+  mask-image: linear-gradient(180deg, black 85%, transparent 100%);
+}
+
+/* Overlay ellipsis in the bottom-right so readers see there's more */
+.post-excerpt::after {
+  content: '\2026'; /* ellipsis character */
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.2rem;
+  background: transparent;
+  color: rgba(0,0,0,0.8);
+  font-weight: 600;
+  padding-left: 0.25rem;
+  pointer-events: none;
+  /* ensure it displays above normal text */
+  z-index: 3;
+}
+
+/* Fallback: clamp lines and show native ellipsis where supported (WebKit/Blink) */
+.post-excerpt.index, .post-excerpt.blog {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* leave -webkit-line-clamp unset here; set per-class */
+}
+.post-excerpt.index {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+.post-excerpt.blog {
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
 }
 
 .post-figure { text-align:center; margin:1.25rem 0; }
