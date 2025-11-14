@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How I fixed a misspelt demat account name (PAN → CDSL transfer → Zerodha)"
-date: 2024-10-07
+date: 2025-11-13
 tags: [demat-account, PAN, CDSL, Protean, Shoonya, Zerodha, transfer-fees]
 categories: [finance]
 ---
