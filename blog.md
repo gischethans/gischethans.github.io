@@ -11,7 +11,7 @@ permalink: /blog/
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <small>({{ post.date | date: "%b %d, %Y" }})</small>
-      <div class="post-excerpt blog">
+      <div class="{% if post.excerpt %}post-excerpt full{% else %}post-excerpt blog{% endif %}">
         {% if post.excerpt %}
           {{ post.excerpt | strip_html }}
         {% else %}

@@ -111,6 +111,14 @@
   line-clamp: 6;
 }
 
+/* When a post provides an explicit excerpt via <!--more-->, show it in full here */
+.post-excerpt.full {
+  max-height: none !important;
+  overflow: visible !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
 .post-figure { text-align:center; margin:1.25rem 0; }
 .post-figure img { max-width:100%; height:auto; }
 .post-figure figcaption { font-size:0.9rem; color:#444; margin-top:0.35rem; }
