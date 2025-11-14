@@ -57,6 +57,15 @@
   text-decoration: underline;
 }
 
+/* small utility class for the automatic read-more link */
+.excerpt-readmore {
+  margin-left: 0.5rem;
+  font-weight: 600;
+  color: var(--brand-color);
+  text-decoration: none;
+}
+.excerpt-readmore:hover { text-decoration: underline; }
+
 /* Limit excerpt height and add a subtle fade at the bottom */
 .post-excerpt {
   overflow: hidden;

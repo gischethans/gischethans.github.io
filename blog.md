@@ -14,10 +14,11 @@ permalink: /blog/
       <div class="{% if post.excerpt %}post-excerpt full{% else %}post-excerpt blog{% endif %}">
         {% if post.excerpt %}
           {{ post.excerpt | strip_html }}
+          <a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a>
         {% else %}
           {{ post.content | strip_html }}
+          <a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a>
         {% endif %}
-        <a href="{{ post.url | relative_url }}">Read more →</a>
       </div>
     </li>
   {% endfor %}

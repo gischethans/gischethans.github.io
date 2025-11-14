@@ -19,10 +19,11 @@ StayGeo began on Blogger in 2010. In 2025 I moved the site to GitHub Pages for a
   <div class="{% if post.excerpt %}post-excerpt full{% else %}post-excerpt index{% endif %}">
         {% if post.excerpt %}
           {{ post.excerpt | strip_html }}
+          <a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a>
         {% else %}
           {{ post.content | strip_html }}
+          <a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a>
         {% endif %}
-        <a href="{{ post.url | relative_url }}" style="margin-left:0.5rem; font-weight:600;">Read more →</a>
       </div>
     </li>
   {% endfor %}
