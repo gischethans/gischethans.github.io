@@ -4,6 +4,6 @@ title: "About Me"
 permalink: /about/
 ---
 
-I'm Chethan — I write here to share lessons learned, simplify complex ideas, and reflect on technology and the human side of engineering.
+I'm Chethan, a Generalist interested in software, personal finance, telecom and automobiles. I hope you find something useful or thought-provoking here.
 
-Thanks for stopping by — I hope you find something useful or thought-provoking here.
+You can also find me on [x.com](https://x.com/gischethans) or [LinkedIn](https://www.linkedin.com/in/gischethans/)

@@ -82,3 +82,23 @@
 .post-figure { text-align:center; margin:1.25rem 0; }
 .post-figure img { max-width:100%; height:auto; }
 .post-figure figcaption { font-size:0.9rem; color:#444; margin-top:0.35rem; }
+
+.feedback-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eaecef;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.feedback-footer a {
+  color: #0366d6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.feedback-footer a:hover {
+  text-decoration: underline;
+}
+
