@@ -12,6 +12,8 @@ But there was a catch.
 
 The backups were stored in a proprietary format, with the actual files buried deep under cryptic folder structures. To make matters worse, the backup would be split across multiple DVDs. Restoring anything manually felt like a small archaeology project.
 
+<!--more-->
+
 Over the years, my backup strategy kept evolving. Storage was expensive back then, so I limited myself to burning only the most important files onto optical discs or copying them manually to an external HDD every few months. It worked - but it wasn’t elegant. And it definitely wasn’t efficient.
 
 Eventually, I realized something important: Backups should be simple, fast, and trustworthy. But most GUI backup tools fail miserably at this. They hide everything behind animations and vague progress bars. You never really know:
