@@ -47,7 +47,7 @@
    - .full: when a post provides an explicit excerpt via <!--more--> show full text
 */
 .post-excerpt {
-  margin-top: 2.5rem;
+  margin-top: 0.35rem;
   color: #444;
   font-size: 0.95rem;
   line-height: 1.5; /* increased spacing for readability */
@@ -100,5 +100,9 @@
 
 .feedback-footer a:hover {
   text-decoration: underline;
+}
+
+.post {
+  margin-bottom: 3rem;
 }
 
