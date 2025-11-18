@@ -18,7 +18,8 @@ layout: default
   <section class="post-content" style="line-height:1.7; font-size:1.05rem; color:#24292e;">
     {{ content }}
   </section>
-  
+
+  {% include feedback.html %}  
 
   {% if page.tags or page.categories %}
   <footer class="post-footer" style="margin-top: 2rem; border-top: 1px solid #eaecef; padding-top: 1rem; font-size: 0.9rem;">
@@ -77,7 +78,5 @@ layout: default
 
   </footer>
 {% endif %}
-
-{% include feedback.html %}
 
 </article>
