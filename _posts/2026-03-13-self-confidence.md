@@ -20,9 +20,9 @@ With less than a week left before the examinations, I encouraged the students no
 
 I also spoke about how life is shaped by the choices we make at different stages. In my own case, I could not continue being a topper in PU and Engineering, and my self-confidence took a significant hit during those years. That experience taught me how important it is to maintain confidence in one’s abilities. Sometimes, even pretending to be confident can help trick the mind into performing better.
 
-One of the key suggestions I shared with the students was to temporarily get rid of social media apps, at least until the exams are over. During our days, parents would often disconnect cable TV for a while to remove distractions, but today the biggest distraction is the mobile phone.
+One of the key suggestions I shared with the students was to get rid of social media apps, at least until the exams are over. During our days, parents would often disconnect cable TV for a while to remove distractions, but today the biggest distraction is the mobile phone.
 
-I encouraged them to keep only their primary communication app — most likely WhatsApp — since they might need it to coordinate with classmates, but to turn off notifications for everything else. The idea is simple: reduce unnecessary interruptions and create a calmer environment to focus.
+I encouraged them to keep only their primary communication app, most likely WhatsApp, since they might need it to coordinate with classmates, but to turn off notifications for everything else. The idea is simple: reduce unnecessary interruptions and create a calmer environment to focus.
 
 Interestingly, this practice of turning off notifications was something a senior colleague once advised me as well. Over time, I realized how effective it is not just for studying but even in professional life, where constant notifications can easily break concentration.
 
