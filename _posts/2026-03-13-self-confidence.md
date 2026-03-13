@@ -4,9 +4,11 @@ title: "Facing the Board Exams - A Talk at my Alma Mater"
 date: 2026-03-13
 tags: [reflections, school, exams, public-speaking]
 categories: [reflections]
-------------------
+---
 
 Earlier this week, I visited my alma mater, JC International School (earlier known as Jaycees English Medium School, Karkala), to inquire about the school joining age for my daughter. In the course of our conversation, we went back to the year 2003, when I was in 10th Standard and had emerged as a district topper. Incidentally, this year’s 10th examinations were less than a week away and hall tickets were being distributed. The principal, Chittaranjan Sir, felt I would be a good fit to address the students and share my experiences as they prepared to face their own board exams.
+
+<!--more-->
 
 When Vandana Madam called to confirm the time, I was filled with mixed emotions. Many thoughts ran through my mind. I was no doubt a studious child, but I often struggled with imposter syndrome and constantly looked for motivation and success stories that I could relate to. At the same time, I realized that the students I would be addressing were likely born after 2008, and the world they grew up in is vastly different from the one I knew.
 
