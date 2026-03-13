@@ -3,7 +3,7 @@ layout: post
 title: "A Simple rsync Script that I use for Backups"
 date: 2025-11-18
 tags: [rsync, linux, backup, pc backup, script]
-categories: [utilities]
+categories: [projects]
 ---
 
 Ever since I bought my first PC back in 2008, keeping my data backed up has been a priority. Those were the ThinkCentre desktop days - reliable machines, and thanks to IBM’s proprietary backup software, I felt safe, at least initially!
