@@ -125,12 +125,29 @@
 
 .pagination-btn {
   font-size: 0.9rem;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0.8rem;
+  color: var(--brand-color);
+  background: var(--brand-bg);
+  border: 1px solid var(--brand-color);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background: var(--brand-color);
+  color: #fff;
+  text-decoration: none;
 }
 
 .pagination-btn.disabled {
-  opacity: 0.4;
+  opacity: 0.5;
+  cursor: not-allowed;
   pointer-events: none;
+  border-color: #ccc;
+  color: #666;
+  background: #f5f5f5;
 }
 
 .pagination-info {
