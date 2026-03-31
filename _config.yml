@@ -1,11 +1,17 @@
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-remote-theme
+  - jekyll-paginate
 
 title: "StayGeo"
 description: "Genuine Insights, Honest Opinions"
 
 show_downloads: false
 
+paginate: 3
+paginate_path: "/page/:num/"
+
 excerpt_separator: "<!--more-->"
 
+# Add your Google Analytics tracking ID here (e.g., G-XXXXXXXXXX)
+google_analytics: ""

@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Home"
+---
+
+<p style="font-size:1.05rem; color:#555; margin-bottom:1.5rem;">
+  StayGeo began on Blogger in 2010. In 2025 I moved the site to GitHub Pages for a cleaner writing and reading experience.
+  The old posts remain at <a href="https://gischethans.blogspot.com/">gischethans.blogspot.com</a>.
+</p>
+
+<h2 style="margin-bottom:1rem;">Latest Posts</h2>
+
+<ul class="post-list">
+  {% for post in paginator.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small>({{ post.date | date: "%b %d, %Y" }})</small>
+      <div class="{% if post.excerpt %}post-excerpt full{% else %}post-excerpt index{% endif %}">
+        {% if post.excerpt %}
+          {{ post.excerpt | strip_html }}
+          <a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a>
+        {% else %}
+          {{ post.content | strip_html }}
+          <a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Page navigation">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="btn pagination-btn">← Newer</a>
+  {% else %}
+    <span class="btn pagination-btn disabled">← Newer</span>
+  {% endif %}
+
+  <span class="pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}" class="btn pagination-btn">Older →</a>
+  {% else %}
+    <span class="btn pagination-btn disabled">Older →</span>
+  {% endif %}
+</nav>
+{% endif %}

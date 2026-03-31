@@ -30,8 +30,6 @@ Towards the end, I took questions from the students. They asked about how many h
 
 It was a wonderful feeling to be back at my alma mater and share my experiences with the students. I hope my words were of some help to them. I am grateful to Vandana Madam and Chittaranjan Sir for giving me this opportunity. It was also a special moment to be felicitated by Sankaran Sir, who had been one of our faculty members during my Engineering days - a reminder of how deeply teachers shape our journeys.
 
-<div style="text-align: center;">
-  <img src="/assets/images/chethan_at_jaycees.jpeg" alt="Chethan at Jaycees" style="max-width: 100%;">
-</div>
+{% include img.html src="/assets/images/chethan_at_jaycees.jpeg" alt="Chethan at Jaycees" caption="Chethan at Jaycees" %}
 
 

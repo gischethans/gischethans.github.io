@@ -83,6 +83,12 @@
 .post-figure img { max-width:100%; height:auto; }
 .post-figure figcaption { font-size:0.9rem; color:#444; margin-top:0.35rem; }
 
+/* Image positioning variants (used via {% include img.html pos="left|right" %}) */
+.post-figure.left  { text-align: left; }
+.post-figure.left img  { max-width: 60%; }
+.post-figure.right { text-align: right; }
+.post-figure.right img { max-width: 60%; }
+
 .feedback-footer {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
@@ -106,4 +112,35 @@
   margin-bottom: 2.2rem;
 }
 
+/* Pagination navigation */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eaecef;
+}
 
+.pagination-btn {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+}
+
+.pagination-btn.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Tag cloud on archive page */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}

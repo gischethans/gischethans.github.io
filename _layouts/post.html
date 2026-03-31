@@ -30,7 +30,7 @@ layout: default
         {% for tag in page.tags %}
           {% assign tag = tag | strip %}
           {% capture tag_anchor %}{{ tag | slugify }}{% endcapture %}
-          <a href="{{ '/tags/#' | append: tag_anchor | relative_url }}" class="tag-pill">
+          <a href="{{ '/archive/#tag-' | append: tag_anchor | relative_url }}" class="tag-pill">
             {{ tag }}
           </a>
         {% endfor %}
@@ -42,7 +42,7 @@ layout: default
         {% for tag in tags %}
           {% assign tag = tag | strip %}
           {% capture tag_anchor %}{{ tag | slugify }}{% endcapture %}
-          <a href="{{ '/tags/#' | append: tag_anchor | relative_url }}" class="btn"
+          <a href="{{ '/archive/#tag-' | append: tag_anchor | relative_url }}" class="btn"
             style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
             {{ tag }}
           </a>
@@ -56,7 +56,7 @@ layout: default
         {% for cat in page.categories %}
           {% assign cat = cat | strip %}
           {% capture cat_anchor %}{{ cat | slugify }}{% endcapture %}
-          <a href="{{ '/categories/#' | append: cat_anchor | relative_url }}" class="cat-pill">
+          <a href="{{ '/archive/#' | append: cat_anchor | relative_url }}" class="cat-pill">
             {{ cat }}
           </a>
         {% endfor %}
@@ -68,7 +68,7 @@ layout: default
         {% for cat in categories %}
           {% assign cat = cat | strip %}
           {% capture cat_anchor %}{{ cat | slugify }}{% endcapture %}
-          <a href="{{ '/categories/#' | append: cat_anchor | relative_url }}" class="btn"
+          <a href="{{ '/archive/#' | append: cat_anchor | relative_url }}" class="btn"
             style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
             {{ cat }}
           </a>
