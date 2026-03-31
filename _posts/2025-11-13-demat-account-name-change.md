@@ -9,7 +9,7 @@ categories: [finance]
 **TL;DR**: 
 Correct PAN first. If your broker rejects a demat name correction, transfer holdings (CDSL) to another broker, fix the name, then transfer back. Expect transfer fees and 10–14 day turnaround for transfers.
 
-{% include img.html src="/assets/images/demat-name-fix.svg" alt="Illustration of identity card and arrows representing transfer and correction" caption="Fix PAN → transfer holdings (CDSL) → transfer back" %}
+{% include img.html src="/assets/images/2025-11-13-demat-account-name-change/demat-name-fix.svg" alt="Illustration of identity card and arrows representing transfer and correction" caption="Fix PAN → transfer holdings (CDSL) → transfer back" %}
 
 <!--more-->
 ---
