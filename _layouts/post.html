@@ -29,10 +29,9 @@ layout: default
         <strong>Tags:</strong>
         {% for tag in page.tags %}
           {% assign tag = tag | strip %}
-          {% capture tag_anchor %}{{ tag | slugify }}{% endcapture %}
-          <a href="{{ '/archive/#tag-' | append: tag_anchor | relative_url }}" class="tag-pill">
+          <span class="tag-pill">
             {{ tag }}
-          </a>
+          </span>
         {% endfor %}
       </p>
     {% elsif page.tags and page.tags contains ',' %}
@@ -41,11 +40,9 @@ layout: default
         <strong>Tags:</strong>
         {% for tag in tags %}
           {% assign tag = tag | strip %}
-          {% capture tag_anchor %}{{ tag | slugify }}{% endcapture %}
-          <a href="{{ '/archive/#tag-' | append: tag_anchor | relative_url }}" class="btn"
-            style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem;">
+          <span class="btn" style="padding: 0.15rem 0.4rem; font-size: 0.85rem; margin-right: 0.3rem; border-color: rgba(0,0,0,0.1); color: #444;">
             {{ tag }}
-          </a>
+          </span>
         {% endfor %}
       </p>
     {% endif %}

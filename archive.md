@@ -32,24 +32,11 @@ permalink: /archive/
 {% assign all_tags = site.tags | sort %}
 {% for tag in all_tags %}
   {% assign tagname = tag[0] %}
-  <a href="#tag-{{ tagname | slugify }}" class="tag-pill" style="margin-bottom: 0.3rem;">
+  <span class="tag-pill" style="margin-bottom: 0.3rem;">
     {{ tagname }} <small>({{ tag[1].size }})</small>
-  </a>
+  </span>
 {% endfor %}
 </div>
-
-{% for tag in all_tags %}
-  {% assign tagname = tag[0] %}
-<h4 id="tag-{{ tagname | slugify }}" style="margin-bottom: 0.3rem;">{{ tagname }}</h4>
-<ul style="margin-top: 0.2rem;">
-  {% for post in tag[1] %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>({{ post.date | date: "%b %d, %Y" }})</small>
-    </li>
-  {% endfor %}
-</ul>
-{% endfor %}
 
 ---
 
