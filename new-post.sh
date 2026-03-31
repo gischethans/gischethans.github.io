@@ -32,4 +32,9 @@ categories: []
 
 EOF
 
+# Create an associated image directory for this post
+IMG_DIR="assets/images/${DATE}-${SLUG}"
+mkdir -p "$IMG_DIR"
+
 echo "Created new post: $FILENAME"
+echo "Created image directory: $IMG_DIR"
