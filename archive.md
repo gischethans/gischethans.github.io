@@ -8,6 +8,23 @@ permalink: /archive/
 
 ---
 
+## All Posts
+
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in posts_by_year %}
+<h3 style="margin-bottom: 0.3rem;">{{ year.name }}</h3>
+<ul style="margin-top: 0.2rem;">
+  {% for post in year.items %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small>({{ post.date | date: "%b %d, %Y" }})</small>
+    </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
+---
+
 ## Categories
 
 {% assign all_categories = site.categories | sort %}
@@ -37,20 +54,3 @@ permalink: /archive/
   </span>
 {% endfor %}
 </div>
-
----
-
-## All Posts
-
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-{% for year in posts_by_year %}
-<h3 style="margin-bottom: 0.3rem;">{{ year.name }}</h3>
-<ul style="margin-top: 0.2rem;">
-  {% for post in year.items %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>({{ post.date | date: "%b %d, %Y" }})</small>
-    </li>
-  {% endfor %}
-</ul>
-{% endfor %}
