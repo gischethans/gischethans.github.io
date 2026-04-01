@@ -80,7 +80,21 @@
 }
 
 .post-list li {
-  margin-bottom: 2.2rem;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+/* Elegant fading line separator between posts */
+.post-list li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d0d7de, transparent);
 }
 
 .post-list-header {
