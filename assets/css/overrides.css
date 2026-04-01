@@ -79,14 +79,14 @@
   padding-left: 0;
 }
 
-.post-list li {
+.post-list > li {
   margin-bottom: 4rem;
   padding-bottom: 4rem;
   position: relative;
 }
 
 /* Elegant fading line separator between posts */
-.post-list li:not(:last-child)::after {
+.post-list > li:not(:last-child)::after {
   content: "";
   position: absolute;
   bottom: 0;
