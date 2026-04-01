@@ -85,6 +85,7 @@
 
 .post-list-header {
   margin-bottom: 1.2rem;
+  text-align: center;
 }
 
 .post-list-title {
@@ -172,6 +173,7 @@
   margin-bottom: 1.5rem;
   border-bottom: 2px solid #eaecef;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .post-title {
