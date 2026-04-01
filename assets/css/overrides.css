@@ -206,10 +206,15 @@
   line-height: 1.7;
   font-size: 1.05rem;
   color: #24292e;
+}
+
+/* Safely justify text on paragraphs specifically to avoid messing up lists, headers, and codeblocks */
+.post-content p {
   text-align: justify;
 }
 
-.post-content img {
+/* Center standard inline markdown images without breaking the custom .post-figure shortcodes */
+.post-content p > img {
   display: block;
   margin: 1.25rem auto;
   max-width: 100%;
