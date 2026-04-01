@@ -3,25 +3,17 @@ layout: default
 title: "Home"
 ---
 
-<p class="index-intro">
-  StayGeo began on Blogger in 2010. In 2025 I moved the site to GitHub Pages for a cleaner writing and reading experience.
-  The old posts remain at <a href="https://gischethans.blogspot.com/">gischethans.blogspot.com</a>.
-</p>
-
-<h2 class="index-heading">Latest Posts</h2>
-
 <ul class="post-list">
   {% for post in paginator.posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <small>({{ post.date | date: "%b %d, %Y" }})</small>
-      <div class="{% if post.excerpt %}post-excerpt full{% else %}post-excerpt index{% endif %}">
-        {% if post.excerpt %}
-          {{ post.excerpt | strip_html }}
-          <a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a>
-        {% else %}
-          {{ post.content | strip_html }}
-          <a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a>
+      <div class="post-content">
+        {{ post.excerpt }}
+        {% capture content_size %}{{ post.content | size }}{% endcapture %}
+        {% capture excerpt_size %}{{ post.excerpt | size }}{% endcapture %}
+        {% if content_size != excerpt_size %}
+          <div style="margin-top: 1rem;"><a class="excerpt-readmore" href="{{ post.url | relative_url }}">Read more →</a></div>
         {% endif %}
       </div>
     </li>

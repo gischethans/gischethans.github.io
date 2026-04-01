@@ -41,43 +41,9 @@
   font-size: 0.9rem;
 }
 
-/* Excerpt styling (base + page-specific clamps + explicit-excerpt override)
-   - Base: typography, spacing, overflow handling
-   - Per-page: .index (3 lines), .blog (6 lines)
-   - .full: when a post provides an explicit excerpt via <!--more--> show full text
-*/
-.post-excerpt {
-  margin-top: 0.35rem;
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.5; /* increased spacing for readability */
-  overflow: hidden;
-  position: relative;
-
-  /* default to clamp-friendly layout (WebKit/Blink) */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-
-/* Per-page visible line counts (kept as soft max-height fallback too) */
-.post-excerpt.index { -webkit-line-clamp: 3; line-clamp: 3; max-height: calc(1.5em * 3); }
-.post-excerpt.blog  { -webkit-line-clamp: 6; line-clamp: 6; max-height: calc(1.5em * 6); }
-
-/* Small utility class for the automatic read-more link */
-.excerpt-readmore { margin-left: 0.5rem; font-weight: 600; color: var(--brand-color); text-decoration: none; }
+/* Styling for the automatic read-more link */
+.excerpt-readmore { font-weight: 600; color: var(--brand-color); text-decoration: none; }
 .excerpt-readmore:hover { text-decoration: underline; }
-
-/* No fade overlay — rely on line-clamp for truncation */
-
-/* When an explicit excerpt exists, show the content fully and remove the fade/ellipsis */
-.post-excerpt.full {
-  max-height: none !important;
-  overflow: visible !important;
-  display: block !important;
-  /* remove any clamping by unsetting line-clamp properties */
-  -webkit-line-clamp: unset !important;
-  line-clamp: unset !important;
-}
 
 .post-figure { text-align:center; margin:1.25rem 0; }
 .post-figure img { max-width:100%; height:auto; }
@@ -216,12 +182,4 @@
   color: #444;
 }
 
-.index-intro {
-  font-size: 1.05rem;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
 
-.index-heading {
-  margin-bottom: 1rem;
-}
