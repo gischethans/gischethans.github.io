@@ -8,8 +8,6 @@ categories: [reflections]
 
 Earlier this week, I visited my alma mater, JC International School (earlier known as Jaycees English Medium School, Karkala), to inquire about the school joining age for my daughter. In the course of our conversation, we went back to the year 2003, when I was in 10th Standard and had emerged as a district topper. Incidentally, this year’s 10th examinations were less than a week away and hall tickets were being distributed. The principal, Chittaranjan Sir, felt I would be a good fit to address the students and share my experiences as they prepared to face their own board exams.
 
-<!--more-->
-
 When Vandana Madam called to confirm the time, I was filled with mixed emotions. Many thoughts ran through my mind. I was no doubt a studious child, but I often struggled with imposter syndrome and constantly looked for motivation and success stories that I could relate to. At the same time, I realized that the students I would be addressing were likely born after 2008, and the world they grew up in is vastly different from the one I knew.
 
 Standing in front of school students again after several years felt both nostalgic and slightly surreal. I began by asking how everyone was feeling about the upcoming examinations and who already saw themselves as toppers. It was a pleasant sight to see several hands go up!
@@ -21,6 +19,8 @@ With less than a week left before the examinations, I encouraged the students no
 I also spoke about how life is shaped by the choices we make at different stages. In my own case, I could not continue being a topper in PU and Engineering, and my self-confidence took a significant hit during those years. That experience taught me how important it is to maintain confidence in one’s abilities. Sometimes, even pretending to be confident can help trick the mind into performing better.
 
 One of the key suggestions I shared with the students was to get rid of social media apps, at least until the exams are over. During our days, parents would often disconnect cable TV for a while to remove distractions, but today the biggest distraction is the mobile phone.
+
+<!--more-->
 
 I encouraged them to keep only their primary communication app, most likely WhatsApp, since they might need it to coordinate with classmates, but to turn off notifications for everything else. The idea is simple: reduce unnecessary interruptions and create a calmer environment to focus.
 

@@ -11,9 +11,6 @@ Correct PAN first. If your broker rejects a demat name correction, transfer hold
 
 {% include img.html src="/assets/images/2025-11-13-demat-account-name-change/demat-name-fix.svg" alt="Illustration of identity card and arrows representing transfer and correction" caption="Fix PAN → transfer holdings (CDSL) → transfer back" %}
 
-<!--more-->
----
-
 Brokers fetch account-holder names from the PAN database; sometimes that entry differs from the name printed on the PAN card. Here's how I corrected my wife's name.
 
 My wife's last name was misspelt and was broken into three parts in the PAN database. The steps involved the correction of the name in PAN, followed by the movement of stocks to another demat account and back to Zerodha. We returned to Zerodha because of trust and a better interface.
@@ -23,6 +20,8 @@ PAN correction was straightforward and completed in ~2 weeks. We had to fill the
 
 ### Attempt to correct name in demat account
 Her account was with Zerodha and we tried submitting the account modification form and KYC, Annexure B, new PAN and address proof as outlined here. However, the request was promptly rejected as they considered it a major change and requested a gazette notification for a name change or passport to be submitted. Our attempts to make them understand that ours was a name correction and not a name change were unsuccessful. That is when I sought advice from Manmohan whom I know through the ever-helpful AIFW community. He was quick to point out that these attempts would be futile based on his multiple experiences and suggested that I move my demat account elsewhere and come back to Zerodha later if necessary. Another suggested option was to transfer the holdings to my account temporarily, close the Zerodha account and move the holdings back to a new account - this will have to be backed by documentation. 
+
+<!--more-->
 
 ### Transfer to Shoonya
 The search for a broker equivalent to Zerodha began and I zeroed in on Shoonya by Finvasia. We invest only for the long term and zero brokerage was a must. Zero charges for account opening would be nice and Shoonya fit the bill. The account opening process was online and it took about a week to activate the account. We took the CDSL Easiest route to transfer all the holdings to the Shoonya account and had to bear the transaction charges of 0.03% of the transfer value or ₹25 per ISIN, whichever is higher, + 18% GST. This was the only option (and not closure cum transfer which would have been free) since the names were different in both accounts. 

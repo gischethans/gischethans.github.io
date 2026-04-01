@@ -12,9 +12,6 @@ Yesterday, I opened the control panel for our borewell pump after its power plug
 
 My first instinct was to either clean it thoroughly or replace the entire starter panel. Cleaning seemed tricky; AI suggested using a contact cleaner, which I didn’t have, and I wasn’t sure it would restore the terminals properly anyway.
 
-<!--more-->
----
-
 But curiosity got the better of me.
 
 With some guidance from AI, I slowly began understanding what was inside the panel: a contactor, a few capacitors, a relay, and terminal strips. No electronics, no circuit boards — just a handful of electromechanical components working together to start and protect the motor.
@@ -24,6 +21,8 @@ To be honest, I didn’t know much about this type of system. I wasn’t even aw
 {% include img.html src="/assets/images/2026-03-31-pump-control-repair/new_connectors.jpg" alt="New Connectors" caption="New Connectors" %}
 
 Before touching anything, I sketched a quick wiring diagram and labeled the connections in my own way (I still need to learn the standard way!).
+
+<!--more-->
 
 {% include img.html src="/assets/images/2026-03-31-pump-control-repair/starter_wiring_diagram.jpg" alt="Control Panel Wiring Diagram" caption="Control Panel Wiring Diagram" %}
 

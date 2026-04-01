@@ -74,10 +74,14 @@
   text-decoration: underline;
 }
 
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .post-list li {
   margin-bottom: 2.2rem;
 }
-
 /* Pagination navigation */
 .pagination {
   display: flex;
@@ -157,6 +161,14 @@
   line-height: 1.7;
   font-size: 1.05rem;
   color: #24292e;
+  text-align: justify;
+}
+
+.post-content img {
+  display: block;
+  margin: 1.25rem auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .post-footer {
