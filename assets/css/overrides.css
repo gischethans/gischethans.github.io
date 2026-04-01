@@ -82,6 +82,35 @@
 .post-list li {
   margin-bottom: 2.2rem;
 }
+
+.post-list-header {
+  margin-bottom: 1.2rem;
+}
+
+.post-list-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+.post-list-title a {
+  color: #111;
+  text-decoration: none;
+}
+
+.post-list-title a:hover {
+  text-decoration: underline;
+  color: #0366d6;
+}
+
+.post-list-meta {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #eaecef;
+}
 /* Pagination navigation */
 .pagination {
   display: flex;
