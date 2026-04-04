@@ -5,7 +5,9 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: "Times New Roman", Times, serif;
+    /* Liberation Serif is the Linux-native equivalent to Times New Roman. 
+       Adding it ensures the GitHub Runner creates a selectable text layer. */
+    font-family: "Times New Roman", "Liberation Serif", Times, serif;
     color: #000;
     line-height: 1.4;
     background-color: #fff;
