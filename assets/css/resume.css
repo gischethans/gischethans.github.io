@@ -219,4 +219,8 @@
         orphans: 3;
         widows: 3;
     }
+
+    #cookie-banner {
+        display: none !important;
+    }
 }
