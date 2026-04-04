@@ -37,17 +37,20 @@ jobs:
         
       - name: Serve Site and Generate PDF
         run: |
-          # Start Jekyll in the background
+          # Start Jekyll
           bundle exec jekyll serve --detach --port 4000
           
-          # Reliability Engineering: Wait until the local server responds
-          timeout 30s sh -c 'until curl -s http://127.0.0.1:4000/resume/ > /dev/null; do sleep 2; done'
+          # Wait for server AND check if it's returning 200 OK
+          timeout 60s sh -c 'until curl -Is http://127.0.0.1:4000/resume/ | grep "200 OK"; do sleep 3; done'
           
-          # Ensure target directory exists
+          # Give Chrome a moment to 'warm up' the font engine
+          sleep 5 
+          
           mkdir -p assets
           
-          # Generate PDF with specific flags to maintain a vector text layer
-          google-chrome --headless --disable-gpu --no-pdf-header-footer \
+          # Added --no-sandbox which is often required for stable PDF 
+          # generation on shared Ubuntu runners
+          google-chrome --headless --disable-gpu --no-sandbox --no-pdf-header-footer \
           --run-all-compositor-stages-before-draw \
           --print-to-pdf-no-header \
           --print-to-pdf=assets/Chethan_Resume.pdf "http://127.0.0.1:4000/resume/"
