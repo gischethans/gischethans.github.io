@@ -1,13 +1,11 @@
-/* resume.css - Mimics Jake's Resume Format with CI/CD Optimizations */
+/* resume.css - Mimics Jake's Resume Format */
 
 /* Base Styles */
 .resume-wrapper {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    /* Liberation Serif is the Linux-native equivalent to Times New Roman. 
-       Adding it ensures the GitHub Runner creates a selectable text layer. */
-    font-family: "Times New Roman", "Liberation Serif", Times, serif;
+    font-family: "Times New Roman", Times, serif;
     color: #000;
     line-height: 1.4;
     background-color: #fff;
@@ -58,30 +56,29 @@
 }
 
 .resume-section-title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-variant: small-caps;
     border-bottom: 1px solid #000;
-    margin: 0 0 0.5rem 0;
-    padding-bottom: 0.1rem;
+    margin: 0 0 0.75rem 0;
+    padding-bottom: 0.25rem;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 /* Item Entries */
 .resume-item {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .resume-item-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.1rem;
+    align-items:baseline;
+    margin-bottom: 0.2rem;
 }
 
 .resume-item-title {
     font-weight: bold;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .resume-item-location, .resume-item-date {
@@ -103,14 +100,11 @@
 }
 
 .resume-list li {
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.25rem;
     font-size: 1rem;
-    /* Prevents bullet points from being orphaned across pages */
-    orphans: 3;
-    widows: 3;
 }
 
-/* Download Button Container - Hidden in PDF */
+/* Download Button Container */
 .resume-download-bar {
     max-width: 800px;
     margin: 2rem auto 1rem auto;
@@ -130,8 +124,13 @@
     transition: background-color 0.2s;
 }
 
-/* Print Specific Overrides */
+.btn-download:hover {
+    background-color: #003d82;
+}
+
+/* Print Styles */
 @media print {
+    /* Hide the site header/footer and any download buttons */
     header.page-header, 
     footer.site-footer, 
     .resume-download-bar {
@@ -140,36 +139,33 @@
 
     @page {
         margin: 0.5in;
-        size: letter; /* Standard for US-based GCCs like First Citizens */
     }
 
-    body {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        background-color: white;
-    }
-
-    .resume-wrapper {
-        box-shadow: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-        max-width: none !important;
-    }
-
-    /* Force pure black text for ATS parsing */
+    /* Ensure text colors are pure black */
     .resume-wrapper, .resume-wrapper * {
         color: #000 !important;
         text-shadow: none !important;
+        filter: grayscale(100%) !important;
     }
 
-    /* Prevent awkward section breaks */
-    .resume-section-title {
+    /* Page breaks */
+    .resume-section-title,
+    .resume-company-block > .resume-item-header,
+    .resume-item > .resume-item-subtitle-wrapper {
         break-after: avoid;
         page-break-after: avoid;
     }
     
-    .resume-item {
+    .resume-item, 
+    .resume-company-block {
+        /* Allow breaking inside these large blocks to prevent half-empty pages */
         break-inside: auto;
+        page-break-inside: auto;
+    }
+    
+    .resume-list li {
+        /* Keep individual bullet points together if possible */
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 }
