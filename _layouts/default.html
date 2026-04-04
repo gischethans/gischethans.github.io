@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Load Cayman theme stylesheet from the remote theme -->
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% if page.url == '/resume/' %}
+      {{ page.title }}
+    {% else %}
+      {{ page.title }} | {{ site.title }}
+    {% endif %}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Load Cayman theme stylesheet from the remote theme -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <!-- Local overrides -->
   <link rel="stylesheet" href="{{ '/assets/css/overrides.css' | relative_url }}">
-  </head>
-  <body>
+</head>
 
-    {% include header.html %}
+<body>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-      <footer class="site-footer">
-        <p>© <span id="current-year">{{ site.time | date: '%Y' }}</span> {{ site.title }} · Generated with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
-        <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
-      </footer>
-    </main>
-    {% include cookie-banner.html %}
-  </body>
+  {% include header.html %}
+
+  <main id="content" class="main-content" role="main">
+    {{ content }}
+    <footer class="site-footer">
+      <p>© <span id="current-year">{{ site.time | date: '%Y' }}</span> {{ site.title }} · Generated with <a
+          href="https://pages.github.com/">GitHub Pages</a>.</p>
+      <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+    </footer>
+  </main>
+  {% include cookie-banner.html %}
+</body>
+
 </html>
