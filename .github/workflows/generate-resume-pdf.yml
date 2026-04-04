@@ -6,15 +6,17 @@ on:
       - '_data/resume.yml'
       - 'resume.html'
       - 'assets/css/resume.css'
+  workflow_dispatch: # Allows manual trigger for testing
 
 jobs:
   generate-pdf:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Needed to push the PDF back to the repository
+      contents: write # Essential for pushing the PDF back to your repo
     
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
       
@@ -24,33 +26,44 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
           
-      - name: Install dependencies
-        run: bundle install
+      - name: Install Dependencies and System Fonts
+        run: |
+          bundle install
+          # CRITICAL: Install fonts to ensure the PDF text layer is selectable
+          sudo apt-get update
+          sudo apt-get install -y fonts-liberation fonts-roboto fontconfig ttf-mscorefonts-installer
+          # Force update the font cache so Chrome recognizes the new fonts
+          sudo fc-cache -f -v
         
       - name: Serve Site and Generate PDF
         run: |
-          # Start Jekyll server in the background
+          # Start Jekyll in the background
           bundle exec jekyll serve --detach --port 4000
           
-          # Wait for the server to fully initialize
-          sleep 5
+          # Reliability Engineering: Wait until the local server responds
+          timeout 30s sh -c 'until curl -s http://127.0.0.1:4000/resume/ > /dev/null; do sleep 2; done'
           
-          # Ensure assets directory exists
+          # Ensure target directory exists
           mkdir -p assets
           
-          # Use Ubuntu's built-in Chrome to render the PDF natively
-          google-chrome --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=assets/Chethan_Resume.pdf "http://127.0.0.1:4000/resume/"
+          # Generate PDF with specific flags to maintain a vector text layer
+          google-chrome --headless --disable-gpu --no-pdf-header-footer \
+          --run-all-compositor-stages-before-draw \
+          --print-to-pdf-no-header \
+          --print-to-pdf=assets/Chethan_Resume.pdf "http://127.0.0.1:4000/resume/"
           
       - name: Commit and Push Resume PDF
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
-          # Stage the generated PDF
+          # Stage the PDF
           git add assets/Chethan_Resume.pdf
           
-          # Commit it (will safely skip if the PDF hasn't mathematically changed)
-          git commit -m "chore: auto-generate latest resume PDF" || echo "No changes found, skipping commit."
-          
-          # Push back to the current branch
-          git push
+          # Only commit if the PDF binary has actually changed
+          if git diff --staged --quiet; then
+            echo "No changes detected in the generated PDF. Skipping push."
+          else
+            git commit -m "chore: auto-generate latest ATS-optimized resume PDF"
+            git push
+          fi
