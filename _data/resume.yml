@@ -8,37 +8,6 @@ basics:
   summary: |
     Cloud Platform Architect with 14+ years of experience designing and evolving enterprise-scale cloud platforms supporting 200+ engineers across 10+ subscriptions. Proven expertise in modernizing on-prem workloads to cloud, defining CI/CD reference architectures, implementing governance guardrails, and enabling cost-aware cloud consumption models across a multi-million dollar estate spanning production, staging, and dev/test tiers - primarily on Azure, with tooling and practices transferable across cloud environments.<br><br>Combines deep hands-on DevOps expertise with system-level architectural decision-making, balancing security, scalability, and engineering velocity. Experienced in mentoring engineers, guiding cross-team platform adoption, and partnering with senior stakeholders to align architecture with ISO 27001:2022 compliance and enterprise risk posture.
 
-key_contributions:
-  - "Influenced cloud architecture standards across 10+ subscriptions supporting 200+ engineers and multiple product teams."
-  - "Shaped multi-subscription cloud architecture covering network segmentation, access control models, private connectivity standards, and policy-driven governance controls."
-  - "Designed resilient CI/CD reference architecture leveraging Kubernetes job orchestration, container registry caching, and elastic autoscaling build agents to improve throughput and reduce external dependency risk."
-  - "Led on-prem to cloud migration initiatives, advising on network design, access control, deployment isolation, and infrastructure-as-code adoption."
-  - "Implemented cost-aware cloud strategies including compute SKU governance, Spot/preemptible VM segmentation for non-production workloads, and monitoring-based spend visibility improvements."
-  - "Partnered with engineering leadership and audit stakeholders to align platform evolution with ISO 27001:2022 controls and compliance expectations."
-  - "Mentored engineers on CI/CD architecture, Kubernetes deployment patterns, and secure cloud design practices, improving platform adoption and reducing recurring operational escalations."
-  - "Acted as a technical escalation point for complex cross-team cloud and DevOps challenges."
-  - "Participated in DevOps hiring processes, evaluated candidates, and contributed to capability development discussions."
-  - "Facilitated technical alignment discussions between product, security, and platform stakeholders to balance risk, cost, and delivery velocity."
-  - "Conducted knowledge-sharing sessions to improve engineering maturity in cloud-native development and DevOps practices."
-
-technical_expertise:
-  - category: "Cloud Architecture & Governance"
-    skills: "Multi-subscription cloud environments (Azure), Network segmentation & private connectivity, RBAC modeling, Policy-driven governance, ISO 27001:2022 alignment, Cost-aware cloud design"
-  - category: "Platform Engineering & CI/CD Architecture"
-    skills: "GitHub Actions, Azure DevOps, Jenkins, Kubernetes-based CI execution patterns, Elastic autoscaling build agents, Container registry strategy"
-  - category: "Infrastructure as Code & Automation"
-    skills: "Terraform, ARM/Bicep, Ansible, PowerShell, Shell scripting"
-  - category: "Containers & Orchestration"
-    skills: "Docker, Kubernetes, Helm"
-  - category: "Observability & DevSecOps"
-    skills: "Cloud-native monitoring (Azure Monitor, Application Insights), Secure SDLC, SonarQube, Synopsys Black Duck"
-  - category: "Cost Optimization & Resource Strategy"
-    skills: "Compute SKU governance, Spot/preemptible VM segmentation, Monitoring-driven right-sizing, Spend visibility frameworks"
-  - category: "AI-Assisted Engineering"
-    skills: "GitHub Copilot, ChatGPT, Gemini, OpenAI API experimentation, prompt-driven development workflow"
-  - category: "Supporting Technologies"
-    skills: "Git, Bitbucket, JIRA, Confluence, VMware ESXi, Hyper-V"
-
 experience:
   - company: "HEXAGON CAPABILITY CENTER INDIA PVT. LTD., HYDERABAD"
     description: "Global technology R&D hub for Hexagon AB, a global leader in digital reality solutions"
@@ -72,6 +41,37 @@ experience:
           - "Operated and evolved core engineering platforms, supporting engineering toolchain modernization and collaboration workflows, managing virtualization and database environments to support multiple product teams efficiently."
           - "Drove platform and process improvements beyond tooling, evaluating new technologies, conducting process training, and contributing to UX and documentation to improve cross-team effectiveness."
           - "Extended influence beyond the team, serving as SPOC for Microsoft Gold Partner certification, authoring technical blogs, delivering internal training, and contributing competitive insights to product discussions."
+
+technical_expertise:
+  - category: "Cloud Architecture & Governance"
+    skills: "Multi-subscription cloud environments (Azure), Network segmentation & private connectivity, RBAC modeling, Policy-driven governance, ISO 27001:2022 alignment, Cost-aware cloud design"
+  - category: "Platform Engineering & CI/CD Architecture"
+    skills: "GitHub Actions, Azure DevOps, Jenkins, Kubernetes-based CI execution patterns, Elastic autoscaling build agents, Container registry strategy"
+  - category: "Infrastructure as Code & Automation"
+    skills: "Terraform, ARM/Bicep, Ansible, PowerShell, Shell scripting"
+  - category: "Containers & Orchestration"
+    skills: "Docker, Kubernetes, Helm"
+  - category: "Observability & DevSecOps"
+    skills: "Cloud-native monitoring (Azure Monitor, Application Insights), Secure SDLC, SonarQube, Synopsys Black Duck"
+  - category: "Cost Optimization & Resource Strategy"
+    skills: "Compute SKU governance, Spot/preemptible VM segmentation, Monitoring-driven right-sizing, Spend visibility frameworks"
+  - category: "AI-Assisted Engineering"
+    skills: "GitHub Copilot, ChatGPT, Gemini, OpenAI API experimentation, prompt-driven development workflow"
+  - category: "Supporting Technologies"
+    skills: "Git, Bitbucket, JIRA, Confluence, VMware ESXi, Hyper-V"
+
+key_contributions:
+  - "Influenced cloud architecture standards across 10+ subscriptions supporting 200+ engineers and multiple product teams."
+  - "Shaped multi-subscription cloud architecture covering network segmentation, access control models, private connectivity standards, and policy-driven governance controls."
+  - "Designed resilient CI/CD reference architecture leveraging Kubernetes job orchestration, container registry caching, and elastic autoscaling build agents to improve throughput and reduce external dependency risk."
+  - "Led on-prem to cloud migration initiatives, advising on network design, access control, deployment isolation, and infrastructure-as-code adoption."
+  - "Implemented cost-aware cloud strategies including compute SKU governance, Spot/preemptible VM segmentation for non-production workloads, and monitoring-based spend visibility improvements."
+  - "Partnered with engineering leadership and audit stakeholders to align platform evolution with ISO 27001:2022 controls and compliance expectations."
+  - "Mentored engineers on CI/CD architecture, Kubernetes deployment patterns, and secure cloud design practices, improving platform adoption and reducing recurring operational escalations."
+  - "Acted as a technical escalation point for complex cross-team cloud and DevOps challenges."
+  - "Participated in DevOps hiring processes, evaluated candidates, and contributed to capability development discussions."
+  - "Facilitated technical alignment discussions between product, security, and platform stakeholders to balance risk, cost, and delivery velocity."
+  - "Conducted knowledge-sharing sessions to improve engineering maturity in cloud-native development and DevOps practices."
 
 volunteer:
   - "Trained over 200 students and faculty in DevOps fundamentals through NASSCOM GCC Skills Development Initiative"

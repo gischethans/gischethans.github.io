@@ -29,26 +29,6 @@ permalink: /resume/
         <p style="margin:0; text-align:justify;">{{ site.data.resume.basics.summary }}</p>
     </section>
 
-    <!-- Key Contributions Section -->
-    <section class="resume-section">
-        <h2 class="resume-section-title">Key Contributions</h2>
-        <ul class="resume-list">
-            {% for item in site.data.resume.key_contributions %}
-            <li>{{ item }}</li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    <!-- Technical Expertise Section -->
-    <section class="resume-section">
-        <h2 class="resume-section-title">Technical Expertise</h2>
-        <ul class="resume-list" style="list-style-type: none; padding-left: 0;">
-            {% for item in site.data.resume.technical_expertise %}
-            <li><strong>{{ item.category }}:</strong> {{ item.skills }}</li>
-            {% endfor %}
-        </ul>
-    </section>
-
     <!-- Work Experience Section -->
     <section class="resume-section">
         <h2 class="resume-section-title">Work Experience</h2>
@@ -79,6 +59,26 @@ permalink: /resume/
             {% endfor %}
         </div>
         {% endfor %}
+    </section>
+
+    <!-- Technical Expertise Section -->
+    <section class="resume-section">
+        <h2 class="resume-section-title">Technical Expertise</h2>
+        <ul class="resume-list" style="list-style-type: none; padding-left: 0;">
+            {% for item in site.data.resume.technical_expertise %}
+            <li><strong>{{ item.category }}:</strong> {{ item.skills }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Key Contributions Section -->
+    <section class="resume-section">
+        <h2 class="resume-section-title">Key Contributions</h2>
+        <ul class="resume-list">
+            {% for item in site.data.resume.key_contributions %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
     </section>
 
     <!-- Volunteer Experience Section -->
