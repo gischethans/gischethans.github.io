@@ -1,0 +1,87 @@
+basics:
+  name: "CHETHAN S."
+  title: "Cloud Platform Architect | Governance, DevOps & Platform Engineering"
+  email: "chethan@staygeo.com"
+  linkedin: "https://www.linkedin.com/in/gischethans"
+  x: "https://x.com/gischethans"
+  website: "https://staygeo.com/"
+  summary: |
+    Cloud Platform Architect with 14+ years of experience designing and evolving enterprise-scale cloud platforms supporting 200+ engineers across 10+ subscriptions. Proven expertise in modernizing on-prem workloads to cloud, defining CI/CD reference architectures, implementing governance guardrails, and enabling cost-aware cloud consumption models across a multi-million dollar estate spanning production, staging, and dev/test tiers — primarily on Azure, with tooling and practices transferable across cloud environments.<br><br>Combines deep hands-on DevOps expertise with system-level architectural decision-making, balancing security, scalability, and engineering velocity. Experienced in mentoring engineers, guiding cross-team platform adoption, and partnering with senior stakeholders to align architecture with ISO 27001:2022 compliance and enterprise risk posture.
+
+key_contributions:
+  - "Influenced cloud architecture standards across 10+ subscriptions supporting 200+ engineers and multiple product teams."
+  - "Shaped multi-subscription cloud architecture covering network segmentation, access control models, private connectivity standards, and policy-driven governance controls."
+  - "Designed resilient CI/CD reference architecture leveraging Kubernetes job orchestration, container registry caching, and elastic autoscaling build agents to improve throughput and reduce external dependency risk."
+  - "Led on-prem to cloud migration initiatives, advising on network design, access control, deployment isolation, and infrastructure-as-code adoption."
+  - "Implemented cost-aware cloud strategies including compute SKU governance, Spot/preemptible VM segmentation for non-production workloads, and monitoring-based spend visibility improvements."
+  - "Partnered with engineering leadership and audit stakeholders to align platform evolution with ISO 27001:2022 controls and compliance expectations."
+  - "Mentored engineers on CI/CD architecture, Kubernetes deployment patterns, and secure cloud design practices, improving platform adoption and reducing recurring operational escalations."
+  - "Acted as a technical escalation point for complex cross-team cloud and DevOps challenges."
+  - "Participated in DevOps hiring processes, evaluated candidates, and contributed to capability development discussions."
+  - "Facilitated technical alignment discussions between product, security, and platform stakeholders to balance risk, cost, and delivery velocity."
+  - "Conducted knowledge-sharing sessions to improve engineering maturity in cloud-native development and DevOps practices."
+
+technical_expertise:
+  - category: "Cloud Architecture & Governance"
+    skills: "Multi-subscription cloud environments (Azure), Network segmentation & private connectivity, RBAC modeling, Policy-driven governance, ISO 27001:2022 alignment, Cost-aware cloud design"
+  - category: "Platform Engineering & CI/CD Architecture"
+    skills: "GitHub Actions, Azure DevOps, Jenkins, Kubernetes-based CI execution patterns, Elastic autoscaling build agents, Container registry strategy"
+  - category: "Infrastructure as Code & Automation"
+    skills: "Terraform, ARM/Bicep, Ansible, PowerShell, Shell scripting"
+  - category: "Containers & Orchestration"
+    skills: "Docker, Kubernetes, Helm"
+  - category: "Observability & DevSecOps"
+    skills: "Cloud-native monitoring (Azure Monitor, Application Insights), Secure SDLC, SonarQube, Synopsys Black Duck"
+  - category: "Cost Optimization & Resource Strategy"
+    skills: "Compute SKU governance, Spot/preemptible VM segmentation, Monitoring-driven right-sizing, Spend visibility frameworks"
+  - category: "AI-Assisted Engineering"
+    skills: "GitHub Copilot, ChatGPT, Gemini, OpenAI API experimentation, prompt-driven development workflow"
+  - category: "Supporting Technologies"
+    skills: "Git, Bitbucket, JIRA, Confluence, VMware ESXi, Hyper-V"
+
+experience:
+  - company: "HEXAGON CAPABILITY CENTER INDIA PVT. LTD., HYDERABAD"
+    description: "Global technology R&D hub for Hexagon AB, a global leader in digital reality solutions"
+    roles:
+      - title: "Senior DevOps Lead"
+        dates: "JAN 2023 – FEB 2026"
+        bullets:
+          - "Led cloud migration and platform integration for the OnCall Mobile product, ensuring production readiness, scalability, and operational stability."
+          - "Contributed to ISO 27001:2022 audit preparation by aligning DevOps processes with compliance controls."
+          - "Actively explored AI-assisted engineering workflows using tools like GitHub Copilot, ChatGPT, and Gemini to improve developer productivity and problem-solving."
+          - "Designed resilient CI/CD and runtime platforms, stabilizing pipelines via container registry caching, Kubernetes job offloading, and elastic agents to improve performance and reliability at scale."
+          - "Defined cloud governance guardrails using policy-as-code (Azure Policy) to control costs, standardize compute SKUs, and maintain compliance across 10+ subscriptions."
+          - "Guided on-prem to cloud migration architecture covering secure private connectivity, RBAC design, identity & access management (Azure Entra), and environment isolation strategies aligned to least-privilege principles."
+          - "Standardized infrastructure provisioning and observability using IaC and cloud-native monitoring, improving deployment consistency and reducing time to diagnose CI/CD and production issues."
+          - "Mentored and enabled engineering teams on CI/CD, IaC, and observability practices, raising platform maturity and enabling teams to operate with greater autonomy."
+      - title: "Technical Lead"
+        dates: "JAN 2020 – DEC 2022"
+        bullets:
+          - "Designed and enforced platform security controls, automating database firewall management (Azure SQL) and private connectivity to cut manual intervention by over 90% while improving isolation and access governance."
+          - "Implemented private connectivity solutions (private links and endpoints) to eliminate public exposure of cloud workloads."
+          - "Defined scalable Kubernetes deployment patterns, maintaining Helm charts and manifests to support high availability, disaster recovery, and consistent application scaling."
+          - "Re-architected CI execution capacity using elastic autoscaling agents (Azure VMSS), cutting build queue times from 15 minutes to under 2 minutes through on-demand capacity."
+          - "Designed cost-aware cloud runtime strategies, adopting Spot/preemptible VMs for dev/test workloads and introducing automated spend alerts to prevent cost leakage."
+          - "Standardized DevOps platform governance and auditability, automating permissions reporting and administering core toolchain (Azure DevOps, SonarQube, Black Duck) to enforce least privilege and platform stability."
+          - "Contributed to organizational scale, supporting DevOps hiring and onboarding across Hexagon divisions to ensure platform practices scaled with team growth."
+      - title: "Software Analyst → Senior Software Analyst → Software Consultant"
+        dates: "JULY 2011 – DEC 2019"
+        bullets:
+          - "Pioneered DevOps adoption at Hexagon SIG, transitioning from my QA role to help establish early automation and release practices that became the foundation for enterprise-wide CI/CD."
+          - "Standardized build and quality pipelines, onboarding legacy applications to a modern CI platform (Azure DevOps), introducing containerization, and integrating security and quality scans (SonarQube, Black Duck) to improve release consistency."
+          - "Operated and evolved core engineering platforms, supporting engineering toolchain modernization and collaboration workflows, managing virtualization and database environments to support multiple product teams efficiently."
+          - "Drove platform and process improvements beyond tooling, evaluating new technologies, conducting process training, and contributing to UX and documentation to improve cross-team effectiveness."
+          - "Extended influence beyond the team, serving as SPOC for Microsoft Gold Partner certification, authoring technical blogs, delivering internal training, and contributing competitive insights to product discussions."
+
+volunteer:
+  - "Trained over 200 students and faculty in DevOps fundamentals through NASSCOM GCC Skills Development Initiative"
+
+education:
+  - degree: "M.Tech, Remote Sensing & GIS"
+    university: "NIT Karnataka"
+    year: "2011"
+    details: "CGPA: 8.76"
+  - degree: "B.E., Civil Engineering"
+    university: "NMAM Institute of Technology"
+    year: "2009"
+    details: "77.86% (First Class with Distinction)"

@@ -1,0 +1,114 @@
+---
+layout: default
+title: Resume
+permalink: /resume/
+---
+<link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+
+<div class="resume-download-bar">
+    <a href="{{ '/assets/Chethan_Resume.pdf' | relative_url }}" download class="btn-download" style="text-decoration:none;">Download PDF</a>
+</div>
+
+<div class="resume-wrapper">
+
+    <!-- Header Section -->
+    <header class="resume-header">
+        <h1>{{ site.data.resume.basics.name }}</h1>
+        <div style="font-size: 1.1rem; margin-bottom:0.5rem; font-weight:bold;">{{ site.data.resume.basics.title }}</div>
+        <div class="resume-contact">
+            {% if site.data.resume.basics.phone %}<span class="contact-item">{{ site.data.resume.basics.phone }}</span>{% endif %}
+            {% if site.data.resume.basics.email %}<span class="contact-item"><a href="mailto:{{ site.data.resume.basics.email }}">{{ site.data.resume.basics.email }}</a></span>{% endif %}
+            {% if site.data.resume.basics.linkedin %}<span class="contact-item"><a href="{{ site.data.resume.basics.linkedin }}" target="_blank">{{ site.data.resume.basics.linkedin | replace: "https://www.", "" | replace: "https://", "" }}</a></span>{% endif %}
+            {% if site.data.resume.basics.x %}<span class="contact-item"><a href="{{ site.data.resume.basics.x }}" target="_blank">{{ site.data.resume.basics.x | replace: "https://www.", "" | replace: "https://", "" }}</a></span>{% endif %}
+            {% if site.data.resume.basics.website %}<span class="contact-item"><a href="{{ site.data.resume.basics.website }}" target="_blank">{{ site.data.resume.basics.website | replace: "https://www.", "" | replace: "https://", "" | remove_first: "www." }}</a></span>{% endif %}
+        </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="resume-section" style="margin-bottom:1.5rem;">
+        <p style="margin:0; text-align:justify;">{{ site.data.resume.basics.summary }}</p>
+    </section>
+
+    <!-- Key Contributions Section -->
+    <section class="resume-section">
+        <h2 class="resume-section-title">Key Contributions</h2>
+        <ul class="resume-list">
+            {% for item in site.data.resume.key_contributions %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Technical Expertise Section -->
+    <section class="resume-section">
+        <h2 class="resume-section-title">Technical Expertise</h2>
+        <ul class="resume-list" style="list-style-type: none; padding-left: 0;">
+            {% for item in site.data.resume.technical_expertise %}
+            <li><strong>{{ item.category }}:</strong> {{ item.skills }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="resume-section">
+        <h2 class="resume-section-title">Work Experience</h2>
+        
+        {% for exp in site.data.resume.experience %}
+        <div class="resume-company-block" style="margin-bottom: 1.25rem;">
+            <div class="resume-item-header">
+                <span class="resume-item-title">{{ exp.company }}</span>
+            </div>
+            {% if exp.description and exp.description != "" %}
+            <div style="font-style: italic; margin-bottom: 0.5rem; font-size:0.95rem;">
+                {{ exp.description }}
+            </div>
+            {% endif %}
+
+            {% for role in exp.roles %}
+            <div class="resume-item" style="margin-bottom: 0.5rem;">
+                <div class="resume-item-subtitle-wrapper">
+                    <span style="font-weight:bold; font-style:normal;">{{ role.title }}</span>
+                    <span class="resume-item-date" style="font-style:normal;">{{ role.dates }}</span>
+                </div>
+                <ul class="resume-list">
+                    {% for bullet in role.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </section>
+
+    <!-- Volunteer Experience Section -->
+    <section class="resume-section">
+        <h2 class="resume-section-title">Volunteer Experience</h2>
+        <ul class="resume-list">
+            {% for item in site.data.resume.volunteer %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section class="resume-section">
+        <h2 class="resume-section-title">Education</h2>
+        
+        {% for edu in site.data.resume.education %}
+        <div class="resume-item" style="margin-bottom: 0.5rem;">
+            <div class="resume-item-header">
+                <span class="resume-item-title">{{ edu.degree }}</span>
+                <span class="resume-item-date">{{ edu.year }}</span>
+            </div>
+            <div class="resume-item-subtitle-wrapper">
+                <span>{{ edu.university }}</span>
+                {% if edu.details and edu.details != "" %}
+                <span style="font-style:normal; font-size:0.95rem;">{{ edu.details }}</span>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+</div>

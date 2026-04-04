@@ -1,0 +1,56 @@
+name: Generate Resume PDF
+
+on:
+  push:
+    paths:
+      - '_data/resume.yml'
+      - 'resume.html'
+      - 'assets/css/resume.css'
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to push the PDF back to the repository
+    
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+          
+      - name: Install dependencies
+        run: bundle install
+        
+      - name: Serve Site and Generate PDF
+        run: |
+          # Start Jekyll server in the background
+          bundle exec jekyll serve --detach --port 4000
+          
+          # Wait for the server to fully initialize
+          sleep 5
+          
+          # Ensure assets directory exists
+          mkdir -p assets
+          
+          # Use Ubuntu's built-in Chrome to render the PDF natively
+          google-chrome --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=assets/Chethan_Resume.pdf "http://127.0.0.1:4000/resume/"
+          
+      - name: Commit and Push Resume PDF
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Stage the generated PDF
+          git add assets/Chethan_Resume.pdf
+          
+          # Commit it (will safely skip if the PDF hasn't mathematically changed)
+          git commit -m "chore: auto-generate latest resume PDF" || echo "No changes found, skipping commit."
+          
+          # Push back to the current branch
+          git push
