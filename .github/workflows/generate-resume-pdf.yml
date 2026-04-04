@@ -6,13 +6,13 @@ on:
       - '_data/resume.yml'
       - 'resume.html'
       - 'assets/css/resume.css'
-  workflow_dispatch: # Allows manual trigger for testing
+  workflow_dispatch:
 
 jobs:
   generate-pdf:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Essential for pushing the PDF back to your repo
+      contents: write
     
     steps:
       - name: Checkout Code
@@ -25,34 +25,18 @@ jobs:
         with:
           ruby-version: '3.1'
           bundler-cache: true
-          
-      - name: Install Dependencies and System Fonts
-        run: |
-          bundle install
-          # CRITICAL: Install fonts to ensure the PDF text layer is selectable
-          sudo apt-get update
-          sudo apt-get install -y fonts-liberation fonts-roboto fontconfig ttf-mscorefonts-installer
-          # Force update the font cache so Chrome recognizes the new fonts
-          sudo fc-cache -f -v
         
-      - name: Serve Site and Generate PDF
+      - name: Serve and Generate PDF
         run: |
-          # Start Jekyll
+          # 1. Start Jekyll
           bundle exec jekyll serve --detach --port 4000
           
-          # Wait for server AND check if it's returning 200 OK
-          timeout 60s sh -c 'until curl -Is http://127.0.0.1:4000/resume/ | grep "200 OK"; do sleep 3; done'
+          # 2. Readiness Probe (Keep this to prevent 'Connection Refused' in the PDF)
+          timeout 30s sh -c 'until curl -Is http://127.0.0.1:4000/resume/ | grep "200 OK"; do sleep 2; done'
           
-          # Give Chrome a moment to 'warm up' the font engine
-          sleep 5 
-          
-          mkdir -p assets
-          
-          # Added --no-sandbox which is often required for stable PDF 
-          # generation on shared Ubuntu runners
-          google-chrome --headless --disable-gpu --no-sandbox --no-pdf-header-footer \
-          --run-all-compositor-stages-before-draw \
-          --print-to-pdf-no-header \
+          # 3. Generate PDF Resume
+          google-chrome --headless --no-sandbox --disable-dev-shm-usage \
+          --print-to-pdf-no-header --no-pdf-header-footer \
           --print-to-pdf=assets/Chethan_Resume.pdf "http://127.0.0.1:4000/resume/"
           
       - name: Commit and Push Resume PDF
