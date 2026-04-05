@@ -37,7 +37,7 @@ jobs:
           # 3. Generate PDF Resume
           google-chrome --headless --no-sandbox --disable-dev-shm-usage \
           --print-to-pdf-no-header --no-pdf-header-footer \
-          --print-to-pdf=assets/Chethan_Resume.pdf "http://127.0.0.1:4000/resume/"
+          --print-to-pdf=assets/Chethan_Cloud_Platform_Architect.pdf "http://127.0.0.1:4000/resume/"
           
       - name: Commit and Push Resume PDF
         run: |
@@ -45,7 +45,7 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
           # Stage the PDF
-          git add assets/Chethan_Resume.pdf
+          git add assets/Chethan_Cloud_Platform_Architect.pdf
           
           # Only commit if the PDF binary has actually changed
           if git diff --staged --quiet; then
