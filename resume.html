@@ -19,7 +19,6 @@ permalink: /resume/
             {% if site.data.resume.basics.phone %}<span class="contact-item">{{ site.data.resume.basics.phone }}</span>{% endif %}
             {% if site.data.resume.basics.email %}<span class="contact-item"><a href="mailto:{{ site.data.resume.basics.email }}">{{ site.data.resume.basics.email }}</a></span>{% endif %}
             {% if site.data.resume.basics.linkedin %}<span class="contact-item"><a href="{{ site.data.resume.basics.linkedin }}" target="_blank">{{ site.data.resume.basics.linkedin | replace: "https://www.", "" | replace: "https://", "" }}</a></span>{% endif %}
-            {% if site.data.resume.basics.x %}<span class="contact-item"><a href="{{ site.data.resume.basics.x }}" target="_blank">{{ site.data.resume.basics.x | replace: "https://www.", "" | replace: "https://", "" }}</a></span>{% endif %}
             {% if site.data.resume.basics.website %}<span class="contact-item"><a href="{{ site.data.resume.basics.website }}" target="_blank">{{ site.data.resume.basics.website | replace: "https://www.", "" | replace: "https://", "" | remove_first: "www." }}</a></span>{% endif %}
         </div>
     </header>
