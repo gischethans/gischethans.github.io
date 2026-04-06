@@ -31,7 +31,7 @@ experience:
       - title: "Software Analyst → Senior Software Analyst → Software Consultant"
         dates: "JULY 2011 - DEC 2019"
         bullets:
-          - "Early contributor to DevOps adoption at Hexagon SIG, transitioning from QA to help establish automation and release practices that later formed the foundation for broader CI/CD adoption."
+          - "Early contributor to DevOps adoption at Hexagon SIG, where I helped establish automation and release practices that later formed the foundation for broader CI/CD adoption."
           - "Standardized build and quality pipelines by onboarding legacy applications to Azure DevOps and introducing containerization."
           - "Extended influence beyond the immediate team by serving as SPOC for Microsoft Gold Partner certification and authoring blog posts."
 

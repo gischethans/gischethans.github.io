@@ -2,10 +2,14 @@ name: Generate Resume PDF
 
 on:
   push:
+    branches:
+      - main
     paths:
       - '_data/resume.yml'
       - 'resume.html'
       - 'assets/css/resume.css'
+      - '_config.yml'
+      - '.github/workflows/generate-resume-pdf.yml'
   workflow_dispatch:
 
 jobs:
