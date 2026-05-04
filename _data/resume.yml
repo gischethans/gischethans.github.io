@@ -8,6 +8,11 @@ basics:
     Cloud Platform Architect with 14+ years of experience modernizing on-prem workloads and designing scalable cloud platforms. Specializes in CI/CD reference architectures, governance guardrails, and cost-aware cloud operations across enterprise-scale environments. Combines hands-on DevOps expertise with architectural decision-making to build secure, scalable platforms while mentoring teams and aligning engineering practices with ISO 27001:2022 security and compliance requirements.
 
 experience:
+  - company: "SIENT Technologies"
+    description: "A London-based software engineering and consulting firm providing end-to-end digital enablement and bespoke development solutions."
+    roles:
+      - title: "Cloud Architect"
+        dates: "MAY 2026 - PRESENT"
   - company: "HEXAGON CAPABILITY CENTER INDIA PVT. LTD., HYDERABAD"
     description: "Global technology R&D hub for Hexagon AB, a global leader in digital reality solutions"
     roles:
