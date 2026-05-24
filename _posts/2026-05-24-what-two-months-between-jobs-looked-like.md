@@ -22,7 +22,7 @@ What started as a simple reset between roles slowly became a volatile mix of exp
 
 I updated my resume to focus on Solution Architect positions, refreshed my profiles across job portals, and prepared to navigate the open market. I didn't even own a standalone webcam to face video interviews, but given how powerful smartphone cameras are these days, I started running *Iriun Webcam* software to make do with what I had. 
 
-Let's talk about the part of a career break that people rarely write about on LinkedIn: **the mental toll of the job hunt.** Going from a 14-year stable tenure directly into the open market is a jarring experience. There are also the quiet, pragmatic realities to face—like logging into investment accounts to pause my monthly SIPs to conserve cash flow while the timeline for a new role remains completely open-ended. Not every day felt productive.
+Let's talk about the part of a career break that people rarely write about on LinkedIn: **the mental toll of the job hunt.** Going from a 14-year stable tenure directly into the open market is a jarring experience. There are also the quiet, pragmatic realities to face like logging into investment accounts to pause my monthly SIPs to conserve cash flow while the timeline for a new role remains completely open-ended. Not every day felt productive.
 
 During this period, I went through multiple rounds of rewriting and refining my resume, carefully shaping it to reflect the true scale of my responsibilities and convey my impact as clearly as possible. Once satisfied, I converted it to the clean, developer-centric *Jake's Format*, integrated it directly into my website at [staygeo.com/resume/]({% link resume.html %}), and flipped my LinkedIn status to #OpenToWork. Then came the loop.
 
