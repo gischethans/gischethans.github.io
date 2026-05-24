@@ -30,7 +30,7 @@ There were interviews that went well, and assignments that flopped badly. I subm
 
 My performance flopped as expected. It was an incredibly grounding, brilliant reminder of how much modern engineering relies on immediate documentation retrieval and continuous context rather than rote syntax memorization.
 
-The rejections stung more than expected. There was the distinct sting of being ghosted after final rounds, and days where interviewers used my early academic background in Civil Engineering / Remote Sensing & GIS as a convenient excuse to defer technical discussions—completely discounting my subsequent 14 years of hardcore platform and infrastructure experience. Combined with the brutal summer heat wave and minor dehydration, there were days where I simply felt low, uncertain, or completely exhausted.
+The rejections stung more than expected. There was the distinct sting of being ghosted after final rounds, and days where interviewers used my early academic background in Civil Engineering / Remote Sensing & GIS as a convenient excuse to defer technical discussions - completely discounting my subsequent 14 years of hardcore platform and infrastructure experience. Combined with the brutal summer heat wave and minor dehydration, there were days where I simply felt low, uncertain, or completely exhausted.
 
 But during those weeks, community came through. Friends offered referrals, and I found a strange comfort reading Reddit threads of other tech professionals who deliberately took extended gaps between roles to recalibrate, rest, and protect their clarity of thought.
 
@@ -38,7 +38,7 @@ Eventually, the engineering brain's refusal to turn off pulled my curiosity enti
 
 ## The Local AI Stack & Project Kore
 
-One rabbit hole led to another. I started exploring the mechanics of local AI tooling—Ollama, local models, AI CLIs, and privacy-first setups. Somewhere in the middle of this local environment setup, I decided I wanted to build something tangible. **Project Kore** was born.
+One rabbit hole led to another. I started exploring the mechanics of local AI tooling: Ollama, local models, AI CLIs, and privacy-first setups. Somewhere in the middle of this local environment setup, I decided I wanted to build something tangible. **Project Kore** was born.
 
 The objective was straightforward: build a highly private, local-first personal finance and investment tracker. The immediate bottleneck was data ingestion. Mutual fund and stock data usually come locked inside Consolidated Account Statements (CAS) in PDF format. I spent days figuring out how to parse these financial statements reliably using Python, and quickly realized that PDF parsing is anything but straightforward. 
 
@@ -46,7 +46,7 @@ I initially started out utilizing `pdfplumber`, but formatting shifts and multi-
 
 I installed OpenCode, downloaded a quantized Qwen model, and attempted to develop the parser script completely offline. The reality check was stark: local model performance on my existing consumer hardware was quite poor. 
 
-To get the intelligence I needed without compromising data containment, I began exploring the Gemini CLI alongside local sandboxing techniques. This forced me down a deep rabbit hole of studying modern AI-native workflows: exploring Claude’s documentation extensively, understanding Model Context Protocol (MCP), subagents, hooks, skills, and infrastructure sandboxing. If I was going to navigate the modern engineering landscape effectively, I needed to learn the right design patterns to become "AI+"—an engineer who seamlessly architects solutions around these intelligence platforms.
+To get the intelligence I needed without compromising data containment, I began exploring the Gemini CLI alongside local sandboxing techniques. This forced me down a deep rabbit hole of studying modern AI-native workflows: exploring Claude’s documentation extensively, understanding Model Context Protocol (MCP), subagents, hooks, skills, and infrastructure sandboxing. If I was going to navigate the modern engineering landscape effectively, I needed to learn the right design patterns to become "AI+" - an engineer who seamlessly architects solutions around these intelligence platforms.
 
 Fiddling with local inference naturally makes you look closely at the economics of compute hardware, and I quickly realized why the industry is currently so obsessed with GPUs. At one point, I was researching MacBooks, ThinkPads, and local AI rigs costing upwards of ₹1.3L just to get decent VRAM context. As a budget-friendly compromise for a dedicated desktop GPU, Gemini recommended looking at an RTX 3050 (hovering around ₹22k). Ultimately, I postponed the heavy hardware acquisition for other priorities.
 
