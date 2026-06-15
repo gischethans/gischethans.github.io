@@ -158,13 +158,19 @@
         size: auto; 
     }
 
-    body {
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 99% !important;
         background-color: #ffffff !important;
         color: #000000 !important;
-        /* Standard property */
         print-color-adjust: exact;
-        /* Vendor-prefixed fallback */
         -webkit-print-color-adjust: exact;
+    }
+
+    .main-content {
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .resume-wrapper {
@@ -205,13 +211,21 @@
         page-break-after: avoid;
     }
     
-    .resume-item, 
+    .resume-section {
+        margin-bottom: 1rem;
+    }
+
+    .resume-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .resume-item,
     .resume-company-block {
         break-inside: auto;
         page-break-inside: auto;
         margin-bottom: 1rem;
     }
-    
+
     .resume-list li {
         break-inside: avoid;
         page-break-inside: avoid;

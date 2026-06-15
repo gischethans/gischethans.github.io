@@ -13,6 +13,8 @@ experience:
     roles:
       - title: "Cloud Architect"
         dates: "MAY 2026 - PRESENT"
+        bullets:
+          - "Designing and delivering enterprise Azure modernisation for a client engagement, spanning hub-spoke networking, defence-in-depth security architecture, automated IaC pipelines, and endpoint management consolidation, all aligned to ISO 27001:2022 across a hybrid multi-workload environment."
   - company: "HEXAGON CAPABILITY CENTER INDIA PVT. LTD., HYDERABAD"
     description: "Global technology R&D hub for Hexagon AB, a global leader in digital reality solutions"
     roles:

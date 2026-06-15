@@ -43,6 +43,17 @@ jobs:
           --print-to-pdf-no-header --no-pdf-header-footer \
           --print-to-pdf=assets/Chethan_Cloud_Platform_Architect.pdf "http://127.0.0.1:4000/resume/"
           
+      - name: Trim Blank Trailing Page
+        run: |
+          sudo apt-get install -y qpdf
+          PAGES=$(qpdf --show-npages assets/Chethan_Cloud_Platform_Architect.pdf)
+          echo "PDF has $PAGES pages"
+          if [ "$PAGES" -gt 2 ]; then
+            echo "Trimming to 2 pages..."
+            qpdf assets/Chethan_Cloud_Platform_Architect.pdf --pages . 1-2 -- trimmed.pdf
+            mv trimmed.pdf assets/Chethan_Cloud_Platform_Architect.pdf
+          fi
+
       - name: Commit and Push Resume PDF
         run: |
           git config --global user.name 'github-actions[bot]'
