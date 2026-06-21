@@ -135,3 +135,5 @@ The math improves considerably if you pick your bank carefully. If you're seriou
 What makes IBKR worth the effort for the right investor is **asset access**. The international account opens up the London Stock Exchange and European exchanges, meaning you can buy accumulating Irish UCITS ETFs like CSPX or VUAA directly — the estate-tax-safe, dividend-reinvesting structure the GIFT City route doesn't currently offer. For building a large, long-term index portfolio with that tax efficiency, IBKR with a low-cost remittance bank is a serious option.
 
 For a ₹10,000 monthly SIP using a standard bank, the GIFT City route still wins on pure friction.
+
+*Disclaimer: None of this is financial or tax advice. Please do your own research and consult a professional for your specific situation.*

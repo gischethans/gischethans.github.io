@@ -8,7 +8,6 @@ on:
       - '_data/resume.yml'
       - 'resume.html'
       - 'assets/css/resume.css'
-      - '_config.yml'
       - '.github/workflows/generate-resume-pdf.yml'
   workflow_dispatch:
 
