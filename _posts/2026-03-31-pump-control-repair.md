@@ -4,6 +4,7 @@ title: "Learning by Repairing: Inside a Simple Pump Control Panel"
 date: 2026-03-31
 tags: [diy, hardware, repair, engineering, reflections, electrical, motor]
 categories: [projects]
+image: assets/images/2026-03-31-pump-control-repair/connector_status_before.jpg
 ---
 
 Yesterday, I opened the control panel for our borewell pump after its power plug started showing signs of melting. On closer inspection, the socket had developed minor cracks, so I decided to replace the socket and plug top. While doing that, I opened the control panel just to be safe and noticed heavy rusting on the terminal connectors.

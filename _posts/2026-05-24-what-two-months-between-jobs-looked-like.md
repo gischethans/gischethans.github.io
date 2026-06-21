@@ -4,6 +4,7 @@ title: "What two months between jobs looked like"
 date: 2026-05-24
 tags: [reflections, growth, learning, career-break]
 categories: [reflections]
+image: /assets/images/2026-05-24-what-two-months-between-jobs-looked-like/20260425_163424.jpg
 ---
 
 When I signed off from my first job after college on February 27, 2026, after 14 years and 7 months, I was not prepared to be without an offer. The expectation had been a smooth transition to a new role over a single weekend. However, it became evident during my final few days that the ride might not be smooth, and I had to prepare for a break of at least a few weeks. As a positive-minded person, I calmed myself down by recognizing that a break like this might never come again, and I should make the absolute most of it. 
