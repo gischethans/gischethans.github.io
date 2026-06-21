@@ -28,6 +28,7 @@ title: "$TITLE"
 date: $DATE
 tags: []
 categories: []
+image: /assets/images/${DATE}-${SLUG}/
 ---
 
 EOF

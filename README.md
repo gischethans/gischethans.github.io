@@ -50,4 +50,15 @@ You can use the provided script to quickly create a new blog post:
 ```bash
 ./new-post.sh "My Post Title"
 ```
-This will create a new Markdown file in the `_posts` directory with the correct date prefix and front matter.
+
+This creates a new Markdown file in `_posts/` with the correct date prefix and front matter, and a matching image directory under `assets/images/`.
+
+### Social sharing image (Open Graph)
+
+The `image:` field in the front matter controls the preview image shown when the post link is shared on LinkedIn, Twitter/X, WhatsApp, etc. The script pre-fills it with the path to the post's image directory — update it to point to the specific file once you have an image:
+
+```yaml
+image: /assets/images/2026-06-20-my-post-slug/my-image.png
+```
+
+Posts without an `image:` field will still share correctly, but with a plain text card instead of a visual preview.
