@@ -62,3 +62,22 @@ image: /assets/images/2026-06-20-my-post-slug/my-image.png
 ```
 
 Posts without an `image:` field will still share correctly, but with a plain text card instead of a visual preview.
+
+## Optimizing Images
+
+Before committing images, run the optimization script to resize and compress them for the web:
+
+```bash
+./optimize-images.sh                         # process all of assets/images/
+./optimize-images.sh assets/images/2026-06-my-post  # process a specific post folder
+./optimize-images.sh path/to/photo.jpg       # process a single file
+```
+
+What it does:
+- **JPEG/PNG:** resizes to max 1330px wide (2× retina for the 665px content area) and compresses JPEGs to 80% quality. Skips files already within bounds, so it's safe to run multiple times.
+- **HEIC:** converts to WebP (preferred) or JPEG, then deletes the original. Install `cwebp` once to enable WebP output:
+  ```bash
+  brew install webp
+  ```
+
+**Typical workflow:** drop phone photos into `assets/images/<post-folder>/`, run the script on that folder, then commit.
